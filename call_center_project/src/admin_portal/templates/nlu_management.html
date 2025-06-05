@@ -1,0 +1,99 @@
+{% extends "base.html" %} <!-- Jinja2 comment: Assuming base.html exists -->
+
+{% block title %}NLU Model Management{% endblock %}
+
+{% block content %}
+    <h1>NLU Model Management</h1>
+
+    <p>Use this section to manage and retrain your NLU models.</p>
+
+    <h2>Trigger NLU Retraining</h2>
+    <!--
+        In a real Flask app, the action would be: action="{{ url_for('trigger_nlu_retrain') }}"
+        The form below is a placeholder. Parameters for retraining (epochs, model prefix, etc.)
+        would ideally be configurable through this form.
+    -->
+    <form id="retrainNluForm" action="/trigger_nlu_retrain" method="POST">
+        <fieldset>
+            <legend>Retraining Options (Conceptual)</legend>
+            <p>
+                <label for="model_prefix">Model Name Prefix (Optional):</label><br>
+                <input type="text" id="model_prefix" name="model_name_prefix" placeholder="e.g., my_custom_model">
+            </p>
+            <p>
+                <label for="epochs">Epochs (Optional, overrides config):</label><br>
+                <input type="number" id="epochs" name="epochs" min="1" placeholder="e.g., 100">
+            </p>
+            <p>
+                <input type="checkbox" id="force_retrain" name="force" value="true">
+                <label for="force_retrain">Force Retraining (ignore cache)</label>
+            </p>
+            <p>
+                <label for="nlu_test_data">NLU Test Data Directory (Optional, relative to project root):</label><br>
+                <input type="text" id="nlu_test_data" name="test_data_dir" placeholder="e.g., data/nlu_test_sets/set1">
+            </p>
+        </fieldset>
+        <br>
+        <button type="submit">Retrain NLU Model Now</button>
+    </form>
+    <p><i>Note: Clicking "Retrain" will start the process in the background. Check status below.</i></p>
+
+    <hr>
+
+    <h2>Latest Retraining Status</h2>
+    <p>
+        <button type="button" id="refreshStatusBtn">Refresh Status</button>
+        (<em>In a real UI, this might poll automatically or use WebSockets.</em>)
+    </p>
+    <pre id="retrainingStatusContainer" style="white-space: pre-wrap; background-color: #f5f5f5; border: 1px solid #ccc; padding: 10px;">
+<!-- Status content will be loaded here by JavaScript, or pre-filled by server on initial load -->
+{{ current_status_json | default('Status not yet available. Click Refresh or trigger a retraining.') }}
+    </pre>
+
+    <script>
+        // Placeholder for fetching status - a real UI would use AJAX
+        // This script block would ideally be in a static JS file.
+        document.addEventListener('DOMContentLoaded', function() {
+            const refreshButton = document.getElementById('refreshStatusBtn');
+            const statusContainer = document.getElementById('retrainingStatusContainer');
+
+            if (refreshButton) {
+                refreshButton.addEventListener('click', function() {
+                    statusContainer.innerText = 'Fetching status...';
+                    // Conceptual: fetch('/get_nlu_retraining_status')
+                    //     .then(response => response.json())
+                    //     .then(data => {
+                    //         statusContainer.innerText = JSON.stringify(data, null, 2);
+                    //     })
+                    //     .catch(error => {
+                    //         statusContainer.innerText = 'Error fetching status: ' + error;
+                    //         console.error('Error fetching status:', error);
+                    //     });
+                    alert('Conceptual: Status would be fetched via JavaScript and displayed here. For this placeholder, you might need to manually navigate to /get_nlu_retraining_status or check logs after triggering a retrain.');
+                });
+            }
+
+            // Example of how form data could be collected to pass to orchestrator (conceptual)
+            // const retrainForm = document.getElementById('retrainNluForm');
+            // if(retrainForm) {
+            //     retrainForm.addEventListener('submit', function(event) {
+            //         event.preventDefault(); // Prevent default form submission
+            //         const formData = new FormData(retrainForm);
+            //         const params = new URLSearchParams();
+            //         for (const pair of formData) {
+            //             if (pair[1]) { // Only add if value is present
+            //                if(pair[0] === 'force' && pair[1] === 'true') params.append(pair[0], ''); // for action='store_true'
+            //                else params.append(pair[0], pair[1]);
+            //             }
+            //         }
+            //         // In a real JS app, you'd then use fetch to POST these params
+            //         // fetch('/trigger_nlu_retrain?' + params.toString(), { method: 'POST' }) ...
+            //         alert('Form submitted (conceptually). Parameters would be sent to backend: ' + params.toString());
+            //         // For placeholder, allow normal form submission. Remove preventDefault & AJAX part for that.
+            //     });
+            // }
+        });
+    </script>
+
+    <p><a href="/">Back to Dashboard</a></p>
+{% endblock %}

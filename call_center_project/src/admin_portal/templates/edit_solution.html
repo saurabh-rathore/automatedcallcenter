@@ -1,0 +1,51 @@
+{% extends "base.html" %} <!-- Jinja2 comment: Assuming base.html exists -->
+
+{% block title %}Edit Solution{% endblock %}
+
+{% block content %}
+    <h1>Edit Solution</h1>
+
+    <!--
+    Conceptual: Similar to edit_faq.html, this page would be for editing a specific solution.
+    GET request: Load solution by ID, pre-fill form.
+    POST request: Validate data, update solutions.yml, redirect.
+    -->
+
+    <form action="/kb/solution/save" method="POST"> <!-- Conceptual action -->
+        <input type="hidden" name="solution_id" value="{{ solution.id if solution else 'NEW_ID' }}"> <!-- Jinja2 comment -->
+
+        <p>
+            <label for="solution_id_display">Solution ID:</label><br>
+            <input type="text" id="solution_id_display" name="id_display" value="{{ solution.id if solution else 'Enter new ID' }}" {% if solution and solution.id %}readonly{% endif %}>
+        </p>
+        <p>
+            <label for="solution_problem">Problem Description:</label><br>
+            <input type="text" id="solution_problem" name="problem_description" value="{{ solution.problem_description if solution else '' }}" placeholder="e.g., No internet connection">
+        </p>
+        <p>
+            <label for="solution_intent">Related Intent (Optional):</label><br>
+            <input type="text" id="solution_intent" name="related_intent" value="{{ solution.related_intent if solution else '' }}" placeholder="e.g., report_issue">
+        </p>
+        <p>
+            <label for="solution_entities">Related Entities (JSON format, e.g., `[{"service_type": "internet"}]`):</label><br>
+            <textarea id="solution_entities" name="related_entities_json" rows="3" cols="50" placeholder="e.g., [{\"service_type\": \"internet\"}]">{{ solution.related_entities | tojson if solution and solution.related_entities else '' }}</textarea> <!-- Jinja2 comment -->
+        </p>
+        <p>
+            <label for="solution_steps">Solution Steps (JSON format for list of step objects):</label><br>
+            <textarea id="solution_steps" name="steps_json" rows="8" cols="50" placeholder="e.g.,\n[\n  {\"text\": \"Restart your modem.\"},\n  {\"text\": \"Check cable connections.\"}\n]">{{ solution.steps | tojson(indent=2) if solution and solution.steps else '' }}</textarea> <!-- Jinja2 comment -->
+            <!-- Each step object could be more complex, e.g., {"text": "...", "action_suggestion": "..."} -->
+        </p>
+        <p>
+            <label for="solution_tags">Tags (comma-separated):</label><br>
+            <input type="text" id="solution_tags" name="tags" value="{{ solution.tags | join(', ') if solution and solution.tags else '' }}" placeholder="e.g., internet, troubleshooting, modem">
+        </p>
+
+        <p>
+            <input type="submit" value="Save Solution">
+            <a href="/kb_management">Cancel</a>
+        </p>
+    </form>
+
+    <p><em>(This is a placeholder template. In a real application, form fields would be dynamically populated and submitted. Steps would likely have a more user-friendly UI for adding/editing.)</em></p>
+
+{% endblock %}

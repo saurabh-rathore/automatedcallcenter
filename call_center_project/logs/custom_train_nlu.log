@@ -1,0 +1,9 @@
+2025-06-05 12:21:07,629 - NluTrainingScript - INFO - --- Starting Rasa NLU Model Processing ---
+2025-06-05 12:21:07,630 - NluTrainingScript - INFO - Project Root: /app/call_center_project
+2025-06-05 12:21:07,630 - NluTrainingScript - INFO - Using Config: /app/call_center_project/config.yml
+2025-06-05 12:21:07,630 - NluTrainingScript - INFO - Using NLU Data from: /app/call_center_project/data/training_data/nlu
+2025-06-05 12:21:07,630 - NluTrainingScript - INFO - Using Domain from: /app/call_center_project/domain.yml
+2025-06-05 12:21:07,630 - NluTrainingScript - INFO - Models will be saved to: /app/call_center_project/models/nlu
+2025-06-05 12:21:07,630 - NluTrainingScript - ERROR - 'rasa' command not found or not executable.
+2025-06-05 12:21:07,630 - NluTrainingScript - ERROR - Please ensure Rasa is installed and its directory is in your system's PATH.
+2025-06-05 12:21:07,630 - NluTrainingScript - ERROR - Training script (or optional testing) process encountered errors or Rasa not found.

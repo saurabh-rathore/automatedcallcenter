@@ -1,0 +1,127 @@
+2025-06-05 12:24:50,176 - NluTrainingScript - INFO - --- Starting Rasa NLU Model Processing ---
+2025-06-05 12:24:50,176 - NluTrainingScript - INFO - Project Root: /app/call_center_project
+2025-06-05 12:24:50,176 - NluTrainingScript - INFO - Using Config: /app/call_center_project/config.yml
+2025-06-05 12:24:50,176 - NluTrainingScript - INFO - Using NLU Data from: /app/call_center_project/data/training_data/nlu
+2025-06-05 12:24:50,176 - NluTrainingScript - INFO - Using Domain from: /app/call_center_project/domain.yml
+2025-06-05 12:24:50,176 - NluTrainingScript - INFO - Models will be saved to: /app/call_center_project/models/nlu
+2025-06-05 12:24:50,177 - NluTrainingScript - INFO - Model Name Prefix: my_test_model
+2025-06-05 12:24:50,177 - NluTrainingScript - ERROR - 'rasa' command not found or not executable. Please ensure Rasa is installed and in PATH.
+2025-06-05 12:24:50,177 - NluTrainingScript - ERROR - Training script (or optional testing) process encountered errors or Rasa not found.
+2025-06-05 12:26:47,377 - NluTrainingScript - INFO - Created dummy NLU test data file: /app/call_center_project/data/orchestrator_test_data/placeholder_test_data.yml
+2025-06-05 12:26:47,378 - NluTrainingScript - INFO - --- Starting Rasa NLU Model Processing ---
+2025-06-05 12:26:47,378 - NluTrainingScript - INFO - Project Root: /app/call_center_project
+2025-06-05 12:26:47,378 - NluTrainingScript - INFO - Using Config: /app/call_center_project/config.yml
+2025-06-05 12:26:47,378 - NluTrainingScript - INFO - Using NLU Data from: /app/call_center_project/data/training_data/nlu
+2025-06-05 12:26:47,378 - NluTrainingScript - INFO - Using Domain from: /app/call_center_project/domain.yml
+2025-06-05 12:26:47,378 - NluTrainingScript - INFO - Models will be saved to: /app/call_center_project/models/nlu
+2025-06-05 12:26:47,378 - NluTrainingScript - INFO - Custom Epochs: 50
+2025-06-05 12:26:47,378 - NluTrainingScript - INFO - Model Name Prefix: orch_model
+2025-06-05 12:26:47,378 - NluTrainingScript - INFO - Force training enabled.
+2025-06-05 12:26:47,378 - NluTrainingScript - INFO - NLU Test Data from: /app/call_center_project/data/orchestrator_test_data
+2025-06-05 12:26:47,378 - NluTrainingScript - INFO - NLU Test Results will be saved to: /app/call_center_project/results/nlu_test_results_orchestrated
+2025-06-05 12:26:47,379 - NluTrainingScript - ERROR - 'rasa' command not found or not executable. Please ensure Rasa is installed and in PATH.
+2025-06-05 12:26:47,379 - NluTrainingScript - ERROR - Training script (or optional testing) process encountered errors or Rasa not found.
+2025-06-05 12:37:55,578 - NluTrainingScript - INFO - --- Starting Rasa NLU Model Processing ---
+2025-06-05 12:37:55,579 - NluTrainingScript - INFO - Project Root: /app/call_center_project
+2025-06-05 12:37:55,579 - NluTrainingScript - INFO - Using Config: /app/call_center_project/config.yml
+2025-06-05 12:37:55,579 - NluTrainingScript - INFO - Using NLU Data from: /app/call_center_project/data/training_data/nlu
+2025-06-05 12:37:55,579 - NluTrainingScript - INFO - Using Domain from: /app/call_center_project/domain.yml
+2025-06-05 12:37:55,579 - NluTrainingScript - INFO - Models will be saved to: /app/call_center_project/models/nlu
+2025-06-05 12:37:55,579 - NluTrainingScript - INFO - Custom Epochs: 50
+2025-06-05 12:37:55,579 - NluTrainingScript - INFO - Model Name Prefix: orch_model
+2025-06-05 12:37:55,580 - NluTrainingScript - INFO - Force training enabled.
+2025-06-05 12:37:55,580 - NluTrainingScript - INFO - NLU Test Data from: /app/call_center_project/data/orchestrator_test_data
+2025-06-05 12:37:55,580 - NluTrainingScript - INFO - NLU Test Results will be saved to: /app/call_center_project/results/nlu_test_results_orchestrated
+2025-06-05 12:37:55,580 - NluTrainingScript - ERROR - 'rasa' command not found or not executable. Please ensure Rasa is installed and in PATH.
+2025-06-05 12:37:55,580 - NluTrainingScript - ERROR - Training script (or optional testing) process encountered errors or Rasa not found.
+2025-06-05 12:40:01,646 - NluTrainingScript - DEBUG - Logging setup complete.
+2025-06-05 12:40:01,647 - NluTrainingScript - INFO - Created dummy NLU test data file: /app/call_center_project/results/dummy_test_data_for_train_nlu/placeholder_test_data.yml
+2025-06-05 12:40:01,647 - NluTrainingScript - INFO - --- Starting Rasa NLU Model Processing ---
+2025-06-05 12:40:01,648 - NluTrainingScript - INFO - Project Root: /app/call_center_project
+2025-06-05 12:40:01,648 - NluTrainingScript - INFO - Using Config: /app/call_center_project/config.yml
+2025-06-05 12:40:01,648 - NluTrainingScript - INFO - Using NLU Data from: /app/call_center_project/data/training_data/nlu
+2025-06-05 12:40:01,648 - NluTrainingScript - INFO - Using Domain from: /app/call_center_project/domain.yml
+2025-06-05 12:40:01,648 - NluTrainingScript - INFO - Models will be saved to: /app/call_center_project/models/nlu
+2025-06-05 12:40:01,648 - NluTrainingScript - INFO - Model Name Prefix: orch_eval_model
+2025-06-05 12:40:01,648 - NluTrainingScript - INFO - NLU Test Data from: /app/call_center_project/results/dummy_test_data_for_train_nlu
+2025-06-05 12:40:01,648 - NluTrainingScript - INFO - NLU Test Results will be saved to: /app/call_center_project/results/nlu_test_results_orchestrated
+2025-06-05 12:40:01,648 - NluTrainingScript - ERROR - 'rasa' command not found or not executable. Please ensure Rasa is installed and in PATH.
+2025-06-05 12:40:01,648 - NluTrainingScript - ERROR - Training script (or optional testing) process encountered errors or Rasa not found.
+2025-06-05 12:42:00,278 - NluTrainingScript - INFO - Created dummy NLU test data file: /app/call_center_project/results/dummy_test_data_for_deployment/placeholder_test_data.yml
+2025-06-05 12:42:00,278 - NluTrainingScript - INFO - --- Starting Rasa NLU Model Processing ---
+2025-06-05 12:42:00,278 - NluTrainingScript - INFO - Project Root: /app/call_center_project
+2025-06-05 12:42:00,278 - NluTrainingScript - INFO - Using Config: /app/call_center_project/config.yml
+2025-06-05 12:42:00,279 - NluTrainingScript - INFO - Using NLU Data from: /app/call_center_project/data/training_data/nlu
+2025-06-05 12:42:00,279 - NluTrainingScript - INFO - Using Domain from: /app/call_center_project/domain.yml
+2025-06-05 12:42:00,279 - NluTrainingScript - INFO - Models will be saved to: /app/call_center_project/models/nlu
+2025-06-05 12:42:00,279 - NluTrainingScript - INFO - Model Name Prefix: orch_deploy_model
+2025-06-05 12:42:00,279 - NluTrainingScript - INFO - NLU Test Data from: /app/call_center_project/results/dummy_test_data_for_deployment
+2025-06-05 12:42:00,279 - NluTrainingScript - INFO - NLU Test Results will be saved to: /app/call_center_project/results/nlu_test_results_orchestrated
+2025-06-05 12:42:00,279 - NluTrainingScript - ERROR - 'rasa' command not found or not executable. Please ensure Rasa is installed and in PATH.
+2025-06-05 12:42:00,279 - NluTrainingScript - ERROR - Training script (or optional testing) process encountered errors or Rasa not found.
+2025-06-05 12:45:26,866 - NluTrainingScript - INFO - Created dummy NLU test data file: /app/call_center_project/data/final_test_data/placeholder_test_data.yml
+2025-06-05 12:45:26,866 - NluTrainingScript - INFO - --- Starting Rasa NLU Model Processing ---
+2025-06-05 12:45:26,866 - NluTrainingScript - INFO - Project Root: /app/call_center_project
+2025-06-05 12:45:26,867 - NluTrainingScript - INFO - Using Config: /app/call_center_project/config.yml
+2025-06-05 12:45:26,867 - NluTrainingScript - INFO - Using NLU Data from: /app/call_center_project/data/training_data/nlu
+2025-06-05 12:45:26,867 - NluTrainingScript - INFO - Using Domain from: /app/call_center_project/domain.yml
+2025-06-05 12:45:26,867 - NluTrainingScript - INFO - Models will be saved to: /app/call_center_project/models/nlu
+2025-06-05 12:45:26,867 - NluTrainingScript - INFO - Model Name Prefix: final_orch_model
+2025-06-05 12:45:26,867 - NluTrainingScript - INFO - NLU Test Data from: /app/call_center_project/data/final_test_data
+2025-06-05 12:45:26,867 - NluTrainingScript - INFO - NLU Test Results will be saved to: /app/call_center_project/results/nlu_test_results_orchestrated
+2025-06-05 12:45:26,867 - NluTrainingScript - ERROR - 'rasa' command not found or not executable. Please ensure Rasa is installed and in PATH.
+2025-06-05 12:45:26,867 - NluTrainingScript - ERROR - Training script (or optional testing) process encountered errors or Rasa not found.
+2025-06-05 12:46:56,697 - NluTrainingScript - INFO - Created dummy NLU test data file: /app/call_center_project/data/for_final_report_test/placeholder_test_data.yml
+2025-06-05 12:46:56,697 - NluTrainingScript - INFO - --- Starting Rasa NLU Model Processing ---
+2025-06-05 12:46:56,697 - NluTrainingScript - INFO - Project Root: /app/call_center_project
+2025-06-05 12:46:56,697 - NluTrainingScript - INFO - Using Config: /app/call_center_project/config.yml
+2025-06-05 12:46:56,697 - NluTrainingScript - INFO - Using NLU Data from: /app/call_center_project/data/training_data/nlu
+2025-06-05 12:46:56,697 - NluTrainingScript - INFO - Using Domain from: /app/call_center_project/domain.yml
+2025-06-05 12:46:56,697 - NluTrainingScript - INFO - Models will be saved to: /app/call_center_project/models/nlu
+2025-06-05 12:46:56,697 - NluTrainingScript - INFO - Model Name Prefix: final_report_model
+2025-06-05 12:46:56,697 - NluTrainingScript - INFO - NLU Test Data from: /app/call_center_project/data/for_final_report_test
+2025-06-05 12:46:56,697 - NluTrainingScript - INFO - NLU Test Results will be saved to: /app/call_center_project/results/nlu_test_results_orchestrated
+2025-06-05 12:46:56,698 - NluTrainingScript - ERROR - 'rasa' command not found or not executable. Please ensure Rasa is installed and in PATH.
+2025-06-05 12:46:56,698 - NluTrainingScript - ERROR - Training script (or optional testing) process encountered errors or Rasa not found.
+2025-06-05 12:49:18,008 - NluTrainingScript - INFO - Created dummy NLU test data file: /app/call_center_project/data/validated_test_data/placeholder_test_data.yml
+2025-06-05 12:49:18,008 - NluTrainingScript - INFO - --- Starting Rasa NLU Model Processing ---
+2025-06-05 12:49:18,008 - NluTrainingScript - INFO - Project Root: /app/call_center_project
+2025-06-05 12:49:18,009 - NluTrainingScript - INFO - Using Config: /app/call_center_project/config.yml
+2025-06-05 12:49:18,009 - NluTrainingScript - INFO - Using NLU Data from: /app/call_center_project/data/training_data/nlu
+2025-06-05 12:49:18,009 - NluTrainingScript - INFO - Using Domain from: /app/call_center_project/domain.yml
+2025-06-05 12:49:18,009 - NluTrainingScript - INFO - Models will be saved to: /app/call_center_project/models/nlu
+2025-06-05 12:49:18,009 - NluTrainingScript - INFO - Model Name Prefix: validated_model
+2025-06-05 12:49:18,009 - NluTrainingScript - INFO - NLU Test Data from: /app/call_center_project/data/validated_test_data
+2025-06-05 12:49:18,009 - NluTrainingScript - INFO - NLU Test Results will be saved to: /app/call_center_project/results/nlu_test_results_orchestrated
+2025-06-05 12:49:18,009 - NluTrainingScript - ERROR - 'rasa' command not found or not executable. Please ensure Rasa is installed and in PATH.
+2025-06-05 12:49:18,009 - NluTrainingScript - ERROR - Training script (or optional testing) process encountered errors or Rasa not found.
+2025-06-05 13:23:37,143 - NluTrainingScript - INFO - Created dummy NLU test data file: /app/call_center_project/data/test_set_v2/placeholder_test_data.yml
+2025-06-05 13:23:37,143 - NluTrainingScript - INFO - --- Starting Rasa NLU Model Processing ---
+2025-06-05 13:23:37,143 - NluTrainingScript - INFO - Project Root: /app/call_center_project
+2025-06-05 13:23:37,143 - NluTrainingScript - INFO - Using Config: /app/call_center_project/config.yml
+2025-06-05 13:23:37,143 - NluTrainingScript - INFO - Using NLU Data from: /app/call_center_project/data/training_data/nlu
+2025-06-05 13:23:37,143 - NluTrainingScript - INFO - Using Domain from: /app/call_center_project/domain.yml
+2025-06-05 13:23:37,143 - NluTrainingScript - INFO - Models will be saved to: /app/call_center_project/models/nlu
+2025-06-05 13:23:37,143 - NluTrainingScript - INFO - Model Name Prefix: validated_model_v2
+2025-06-05 13:23:37,143 - NluTrainingScript - INFO - NLU Test Data from: /app/call_center_project/data/test_set_v2
+2025-06-05 13:23:37,143 - NluTrainingScript - INFO - NLU Test Results will be saved to: /app/call_center_project/results/nlu_test_results_orchestrated
+2025-06-05 13:23:37,144 - NluTrainingScript - ERROR - 'rasa' command not found or not executable. Please ensure Rasa is installed and in PATH.
+2025-06-05 13:23:37,144 - NluTrainingScript - ERROR - Training script (or optional testing) process encountered errors or Rasa not found.
+2025-06-05 13:29:31,144 - NluTrainingScript - INFO - --- Starting Rasa NLU Model Processing ---
+2025-06-05 13:29:31,145 - NluTrainingScript - INFO - Project Root: /app/call_center_project
+2025-06-05 13:29:31,145 - NluTrainingScript - INFO - Using Config: /app/call_center_project/config.yml
+2025-06-05 13:29:31,145 - NluTrainingScript - INFO - Using NLU Data from: /app/call_center_project/data/training_data/nlu
+2025-06-05 13:29:31,145 - NluTrainingScript - INFO - Using Domain from: /app/call_center_project/domain.yml
+2025-06-05 13:29:31,145 - NluTrainingScript - INFO - Models will be saved to: /app/call_center_project/models/nlu
+2025-06-05 13:29:31,145 - NluTrainingScript - INFO - Model Name Prefix: admin_triggered_model
+2025-06-05 13:29:31,145 - NluTrainingScript - INFO - Force training enabled.
+2025-06-05 13:29:31,145 - NluTrainingScript - ERROR - 'rasa' command not found or not executable. Please ensure Rasa is installed and in PATH.
+2025-06-05 13:29:31,145 - NluTrainingScript - ERROR - Training script (or optional testing) process encountered errors or Rasa not found.
+2025-06-05 13:34:51,865 - NluTrainingScript - INFO - --- Starting Rasa NLU Model Processing ---
+2025-06-05 13:34:51,865 - NluTrainingScript - INFO - Project Root: /app/call_center_project
+2025-06-05 13:34:51,865 - NluTrainingScript - INFO - Using Config: /app/call_center_project/config.yml
+2025-06-05 13:34:51,865 - NluTrainingScript - INFO - Using NLU Data from: /app/call_center_project/data/training_data/nlu
+2025-06-05 13:34:51,865 - NluTrainingScript - INFO - Using Domain from: /app/call_center_project/domain.yml
+2025-06-05 13:34:51,865 - NluTrainingScript - INFO - Models will be saved to: /app/call_center_project/models/nlu
+2025-06-05 13:34:51,865 - NluTrainingScript - ERROR - 'rasa' command not found or not executable. Please ensure Rasa is installed and in PATH.
+2025-06-05 13:34:51,865 - NluTrainingScript - ERROR - Training script (or optional testing) process encountered errors or Rasa not found.

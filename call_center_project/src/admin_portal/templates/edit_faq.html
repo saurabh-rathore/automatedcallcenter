@@ -1,0 +1,59 @@
+{% extends "base.html" %} <!-- Jinja2 comment: Assuming base.html exists -->
+
+{% block title %}Edit FAQ{% endblock %}
+
+{% block content %}
+    <h1>Edit FAQ</h1>
+
+    <!--
+    Conceptual: In a real Flask application, this page would be rendered
+    by a route like @app.route('/kb/faq/edit/<faq_id>', methods=['GET', 'POST']).
+
+    For GET:
+    - The FAQ with 'faq_id' would be loaded from faqs.yml.
+    - A form would be displayed, pre-filled with the FAQ's current data.
+
+    For POST:
+    - The submitted form data would be validated.
+    - The faqs.yml file would be updated with the new data for this FAQ ID.
+    - The user would typically be redirected back to the KB Management page.
+    -->
+
+    <form action="/kb/faq/save" method="POST"> <!-- Conceptual action, real app would include ID -->
+        <input type="hidden" name="faq_id" value="{{ faq.id if faq else 'NEW_ID' }}"> <!-- Jinja2 comment -->
+
+        <p>
+            <label for="faq_id_display">FAQ ID:</label><br>
+            <input type="text" id="faq_id_display" name="id_display" value="{{ faq.id if faq else 'Enter new ID' }}" {% if faq and faq.id %}readonly{% endif %}>
+            <!-- For new FAQs, ID might be editable or auto-generated. For existing, it's usually readonly. -->
+        </p>
+        <p>
+            <label for="faq_intent">Related Intent:</label><br>
+            <input type="text" id="faq_intent" name="intent" value="{{ faq.intent if faq else '' }}" placeholder="e.g., get_billing_info">
+        </p>
+        <p>
+            <label for="faq_question_variants">Question Variants (one per line):</label><br>
+            <textarea id="faq_question_variants" name="question_variants" rows="3" cols="50" placeholder="When is my bill due?\nWhat's my payment due date?">{{ faq.question_variants | join('\n') if faq and faq.question_variants else '' }}</textarea> <!-- Jinja2 comment -->
+        </p>
+        <p>
+            <label for="faq_answer">Answer:</label><br>
+            <textarea id="faq_answer" name="answer" rows="5" cols="50" placeholder="Your bill is due on the 15th of each month.">{{ faq.answer if faq else '' }}</textarea>
+        </p>
+        <p>
+            <label for="faq_entities">Entities (JSON format, e.g., `[{"billing_property": "due_date"}]`):</label><br>
+            <textarea id="faq_entities" name="entities_json" rows="3" cols="50" placeholder="e.g., [{\"type\": \"product\"}]">{{ faq.entities | tojson if faq and faq.entities else '' }}</textarea> <!-- Jinja2 comment -->
+        </p>
+        <p>
+            <label for="faq_tags">Tags (comma-separated):</label><br>
+            <input type="text" id="faq_tags" name="tags" value="{{ faq.tags | join(', ') if faq and faq.tags else '' }}" placeholder="e.g., billing, payment, due date">
+        </p>
+
+        <p>
+            <input type="submit" value="Save FAQ">
+            <a href="/kb_management">Cancel</a>
+        </p>
+    </form>
+
+    <p><em>(This is a placeholder template. In a real application, form fields would be dynamically populated and submitted.)</em></p>
+
+{% endblock %}

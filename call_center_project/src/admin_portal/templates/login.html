@@ -1,0 +1,41 @@
+{% extends "base.html" %} <!-- Jinja2 comment: Assuming base.html exists -->
+
+{% block title %}Login - Admin Portal{% endblock %}
+
+{% block content %}
+    <h2>Admin Portal Login</h2>
+
+    <!-- Conceptual message area for login errors -->
+    <!--
+        {% with messages = get_flashed_messages(category_filter=["error"]) %}
+            {% if messages %}
+                <div class="error-messages">
+                    <ul>
+                        {% for message in messages %}
+                            <li>{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+        {% endwith %}
+    -->
+    <div id="loginErrorMessagePlaceholder" style="color: red;">
+        <!-- Error messages from handle_login() would conceptually appear here if not redirecting -->
+    </div>
+
+    <form action="/login" method="POST"> <!-- Conceptual: This POST would be handled by app.py's handle_login -->
+        <p>
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username" required value="admin"> <!-- Default value for ease of testing -->
+        </p>
+        <p>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" required value="password123"> <!-- Default value for ease of testing -->
+        </p>
+        <p>
+            <input type="submit" value="Login">
+        </p>
+    </form>
+
+    <p><i>(Placeholder: Use 'admin' / 'password123' or 'user' / 'pass' to login.)</i></p>
+{% endblock %}

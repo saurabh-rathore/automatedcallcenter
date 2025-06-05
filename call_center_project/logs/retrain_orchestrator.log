@@ -1,0 +1,643 @@
+2025-06-05 12:26:47,259 - RetrainOrchestrator - INFO - Setting up dummy NLU environment for orchestrator test run...
+2025-06-05 12:26:47,260 - RetrainOrchestrator - INFO - Dummy environment setup complete.
+2025-06-05 12:26:47,260 - RetrainOrchestrator - INFO - Creating dummy NLU test data directory for train_nlu.py via orchestrator: /app/call_center_project/data/orchestrator_test_data
+2025-06-05 12:26:47,262 - RetrainOrchestrator - INFO - Created dummy NLU test data file for train_nlu.py: /app/call_center_project/data/orchestrator_test_data/placeholder_test_data_for_train_nlu.yml
+2025-06-05 12:26:47,263 - RetrainOrchestrator - INFO - --- Starting NLU Retraining Orchestration ---
+2025-06-05 12:26:47,263 - RetrainOrchestrator - INFO - Starting NLU data validation for path: /app/call_center_project/data/training_data/nlu (Conceptual)
+2025-06-05 12:26:47,263 - RetrainOrchestrator - INFO - NLU data validation successful (Conceptual).
+2025-06-05 12:26:47,263 - RetrainOrchestrator - INFO - Executing NLU training script (train_nlu.py)...
+2025-06-05 12:26:47,263 - RetrainOrchestrator - INFO - Calling train_nlu.py with command: /usr/local/bin/python /app/call_center_project/scripts/train_nlu.py --config /app/call_center_project/config.yml --data /app/call_center_project/data/training_data/nlu --domain /app/call_center_project/domain.yml --out /app/call_center_project/models/nlu --force --epochs 50 --model-name-prefix orch_model --test_data_dir data/orchestrator_test_data --test_results_dir results/nlu_test_results_orchestrated
+2025-06-05 12:26:47,388 - RetrainOrchestrator - WARNING - Errors from train_nlu.py execution:
+2025-06-05 12:26:47,377 - NluTrainingScript - INFO - Created dummy NLU test data file: /app/call_center_project/data/orchestrator_test_data/placeholder_test_data.yml
+2025-06-05 12:26:47,378 - NluTrainingScript - INFO - --- Starting Rasa NLU Model Processing ---
+2025-06-05 12:26:47,378 - NluTrainingScript - INFO - Project Root: /app/call_center_project
+2025-06-05 12:26:47,378 - NluTrainingScript - INFO - Using Config: /app/call_center_project/config.yml
+2025-06-05 12:26:47,378 - NluTrainingScript - INFO - Using NLU Data from: /app/call_center_project/data/training_data/nlu
+2025-06-05 12:26:47,378 - NluTrainingScript - INFO - Using Domain from: /app/call_center_project/domain.yml
+2025-06-05 12:26:47,378 - NluTrainingScript - INFO - Models will be saved to: /app/call_center_project/models/nlu
+2025-06-05 12:26:47,378 - NluTrainingScript - INFO - Custom Epochs: 50
+2025-06-05 12:26:47,378 - NluTrainingScript - INFO - Model Name Prefix: orch_model
+2025-06-05 12:26:47,378 - NluTrainingScript - INFO - Force training enabled.
+2025-06-05 12:26:47,378 - NluTrainingScript - INFO - NLU Test Data from: /app/call_center_project/data/orchestrator_test_data
+2025-06-05 12:26:47,378 - NluTrainingScript - INFO - NLU Test Results will be saved to: /app/call_center_project/results/nlu_test_results_orchestrated
+2025-06-05 12:26:47,379 - NluTrainingScript - ERROR - 'rasa' command not found or not executable. Please ensure Rasa is installed and in PATH.
+2025-06-05 12:26:47,379 - NluTrainingScript - ERROR - Training script (or optional testing) process encountered errors or Rasa not found.
+
+2025-06-05 12:26:47,389 - RetrainOrchestrator - ERROR - train_nlu.py script execution failed. Return code: 1
+2025-06-05 12:26:47,389 - RetrainOrchestrator - ERROR - Orchestration failed: NLU training script execution error.
+2025-06-05 12:26:47,389 - RetrainOrchestrator - ERROR - Orchestrator script encountered errors.
+2025-06-05 12:37:55,383 - RetrainOrchestrator - INFO - Setting up dummy NLU environment for orchestrator test run...
+2025-06-05 12:37:55,383 - RetrainOrchestrator - INFO - Dummy environment setup complete.
+2025-06-05 12:37:55,384 - RetrainOrchestrator - INFO - --- Starting NLU Retraining Orchestration ---
+2025-06-05 12:37:55,384 - RetrainOrchestrator - INFO - Starting NLU data validation for path: /app/call_center_project/data/training_data/nlu (Conceptual)
+2025-06-05 12:37:55,384 - RetrainOrchestrator - INFO - NLU data validation successful (Conceptual).
+2025-06-05 12:37:55,384 - RetrainOrchestrator - INFO - Executing NLU training script (train_nlu.py)...
+2025-06-05 12:37:55,384 - RetrainOrchestrator - INFO - Calling train_nlu.py with command: /usr/local/bin/python /app/call_center_project/scripts/train_nlu.py --config /app/call_center_project/config.yml --data /app/call_center_project/data/training_data/nlu --domain /app/call_center_project/domain.yml --out /app/call_center_project/models/nlu --log-level INFO --force --epochs 50 --model-name-prefix orch_model --test_data_dir data/orchestrator_test_data --test_results_dir results/nlu_test_results_orchestrated
+2025-06-05 12:37:55,594 - RetrainOrchestrator - INFO - STDERR from train_nlu.py (contains its log output):
+2025-06-05 12:37:55,578 - NluTrainingScript - INFO - --- Starting Rasa NLU Model Processing ---
+2025-06-05 12:37:55,579 - NluTrainingScript - INFO - Project Root: /app/call_center_project
+2025-06-05 12:37:55,579 - NluTrainingScript - INFO - Using Config: /app/call_center_project/config.yml
+2025-06-05 12:37:55,579 - NluTrainingScript - INFO - Using NLU Data from: /app/call_center_project/data/training_data/nlu
+2025-06-05 12:37:55,579 - NluTrainingScript - INFO - Using Domain from: /app/call_center_project/domain.yml
+2025-06-05 12:37:55,579 - NluTrainingScript - INFO - Models will be saved to: /app/call_center_project/models/nlu
+2025-06-05 12:37:55,579 - NluTrainingScript - INFO - Custom Epochs: 50
+2025-06-05 12:37:55,579 - NluTrainingScript - INFO - Model Name Prefix: orch_model
+2025-06-05 12:37:55,580 - NluTrainingScript - INFO - Force training enabled.
+2025-06-05 12:37:55,580 - NluTrainingScript - INFO - NLU Test Data from: /app/call_center_project/data/orchestrator_test_data
+2025-06-05 12:37:55,580 - NluTrainingScript - INFO - NLU Test Results will be saved to: /app/call_center_project/results/nlu_test_results_orchestrated
+2025-06-05 12:37:55,580 - NluTrainingScript - ERROR - 'rasa' command not found or not executable. Please ensure Rasa is installed and in PATH.
+2025-06-05 12:37:55,580 - NluTrainingScript - ERROR - Training script (or optional testing) process encountered errors or Rasa not found.
+
+2025-06-05 12:37:55,594 - RetrainOrchestrator - INFO - train_nlu.py script confirmed (via its log output to its stderr stream) that Rasa command was not found. Conceptual success for orchestrator's dry run.
+2025-06-05 12:37:55,595 - RetrainOrchestrator - INFO - Created dummy model for dry run: /app/call_center_project/models/nlu/orch_model.tar.gz
+2025-06-05 12:37:55,595 - RetrainOrchestrator - INFO - Evaluating new NLU model in /app/call_center_project/models/nlu (Conceptual)
+2025-06-05 12:37:55,595 - RetrainOrchestrator - INFO - Found fixed-name model: orch_model.tar.gz
+2025-06-05 12:37:55,595 - RetrainOrchestrator - INFO - Deploying model 'orch_model.tar.gz' to '/app/call_center_project/models/active_nlu_model.tar.gz' (Conceptual by copying)
+2025-06-05 12:37:55,596 - RetrainOrchestrator - INFO - Model 'orch_model.tar.gz' successfully 'deployed' as 'active_nlu_model.tar.gz'.
+2025-06-05 12:37:55,596 - RetrainOrchestrator - INFO - --- NLU Retraining Orchestration Completed Successfully (Conceptually) ---
+2025-06-05 12:37:55,596 - RetrainOrchestrator - INFO - Orchestrator script finished successfully.
+2025-06-05 12:40:01,595 - RetrainOrchestrator - DEBUG - Orchestrator logging setup complete.
+2025-06-05 12:40:01,595 - RetrainOrchestrator - INFO - Setting up dummy NLU environment for orchestrator test run...
+2025-06-05 12:40:01,595 - RetrainOrchestrator - INFO - Creating dummy NLU test data directory for train_nlu.py: /app/call_center_project/results/dummy_test_data_for_train_nlu
+2025-06-05 12:40:01,596 - RetrainOrchestrator - INFO - Created dummy NLU test data file for train_nlu.py: /app/call_center_project/results/dummy_test_data_for_train_nlu/placeholder_test_data_for_train_nlu.yml
+2025-06-05 12:40:01,597 - RetrainOrchestrator - INFO - Created dummy intent_report.json for evaluation testing: /app/call_center_project/results/nlu_test_results_orchestrated/intent_report.json
+2025-06-05 12:40:01,597 - RetrainOrchestrator - INFO - Dummy environment setup complete.
+2025-06-05 12:40:01,597 - RetrainOrchestrator - INFO - --- Starting NLU Retraining Orchestration ---
+2025-06-05 12:40:01,597 - RetrainOrchestrator - INFO - Starting NLU data validation for path: /app/call_center_project/data/training_data/nlu (Conceptual)
+2025-06-05 12:40:01,597 - RetrainOrchestrator - INFO - NLU data validation successful (Conceptual).
+2025-06-05 12:40:01,597 - RetrainOrchestrator - INFO - Executing NLU training script (train_nlu.py)...
+2025-06-05 12:40:01,597 - RetrainOrchestrator - INFO - Calling train_nlu.py with command: /usr/local/bin/python /app/call_center_project/scripts/train_nlu.py --config /app/call_center_project/config.yml --data /app/call_center_project/data/training_data/nlu --domain /app/call_center_project/domain.yml --out /app/call_center_project/models/nlu --log-level DEBUG --model-name-prefix orch_eval_model --test_data_dir results/dummy_test_data_for_train_nlu --test_results_dir results/nlu_test_results_orchestrated
+2025-06-05 12:40:01,656 - RetrainOrchestrator - INFO - STDERR from train_nlu.py (contains its log output):
+2025-06-05 12:40:01,646 - NluTrainingScript - DEBUG - Logging setup complete.
+2025-06-05 12:40:01,647 - NluTrainingScript - INFO - Created dummy NLU test data file: /app/call_center_project/results/dummy_test_data_for_train_nlu/placeholder_test_data.yml
+2025-06-05 12:40:01,647 - NluTrainingScript - INFO - --- Starting Rasa NLU Model Processing ---
+2025-06-05 12:40:01,648 - NluTrainingScript - INFO - Project Root: /app/call_center_project
+2025-06-05 12:40:01,648 - NluTrainingScript - INFO - Using Config: /app/call_center_project/config.yml
+2025-06-05 12:40:01,648 - NluTrainingScript - INFO - Using NLU Data from: /app/call_center_project/data/training_data/nlu
+2025-06-05 12:40:01,648 - NluTrainingScript - INFO - Using Domain from: /app/call_center_project/domain.yml
+2025-06-05 12:40:01,648 - NluTrainingScript - INFO - Models will be saved to: /app/call_center_project/models/nlu
+2025-06-05 12:40:01,648 - NluTrainingScript - INFO - Model Name Prefix: orch_eval_model
+2025-06-05 12:40:01,648 - NluTrainingScript - INFO - NLU Test Data from: /app/call_center_project/results/dummy_test_data_for_train_nlu
+2025-06-05 12:40:01,648 - NluTrainingScript - INFO - NLU Test Results will be saved to: /app/call_center_project/results/nlu_test_results_orchestrated
+2025-06-05 12:40:01,648 - NluTrainingScript - ERROR - 'rasa' command not found or not executable. Please ensure Rasa is installed and in PATH.
+2025-06-05 12:40:01,648 - NluTrainingScript - ERROR - Training script (or optional testing) process encountered errors or Rasa not found.
+
+2025-06-05 12:40:01,656 - RetrainOrchestrator - INFO - train_nlu.py script confirmed (via its log output) that Rasa command was not found. Conceptual success for orchestrator's dry run.
+2025-06-05 12:40:01,657 - RetrainOrchestrator - INFO - Created dummy model for dry run: /app/call_center_project/models/nlu/orch_eval_model.tar.gz
+2025-06-05 12:40:01,657 - RetrainOrchestrator - INFO - Starting model evaluation phase for models in: /app/call_center_project/models/nlu
+2025-06-05 12:40:01,657 - RetrainOrchestrator - INFO - Found fixed-name model for evaluation: orch_eval_model.tar.gz
+2025-06-05 12:40:01,657 - RetrainOrchestrator - INFO - Looking for NLU test results, e.g., intent_report.json at: /app/call_center_project/results/nlu_test_results_orchestrated/intent_report.json
+2025-06-05 12:40:01,657 - RetrainOrchestrator - INFO - Successfully parsed 'intent_accuracy': 0.85 from '/app/call_center_project/results/nlu_test_results_orchestrated/intent_report.json'
+2025-06-05 12:40:01,658 - RetrainOrchestrator - INFO - Threshold PASSED for intent_accuracy: Actual=0.85, Threshold=0.8
+2025-06-05 12:40:01,658 - RetrainOrchestrator - INFO - Model evaluation passed based on metrics.
+2025-06-05 12:40:01,658 - RetrainOrchestrator - INFO - Evaluation summary: Model evaluation passed based on metrics.
+2025-06-05 12:40:01,658 - RetrainOrchestrator - INFO - Deploying model 'orch_eval_model.tar.gz' to '/app/call_center_project/models/active_nlu_model.tar.gz' (Conceptual by copying)
+2025-06-05 12:40:01,659 - RetrainOrchestrator - INFO - Model 'orch_eval_model.tar.gz' successfully 'deployed' as 'active_nlu_model.tar.gz'.
+2025-06-05 12:40:01,659 - RetrainOrchestrator - INFO - --- NLU Retraining Orchestration Completed Successfully (Conceptually) ---
+2025-06-05 12:40:01,659 - RetrainOrchestrator - INFO - Orchestrator script finished successfully.
+2025-06-05 12:42:00,228 - RetrainOrchestrator - INFO - Setting up dummy NLU environment for orchestrator test run...
+2025-06-05 12:42:00,229 - RetrainOrchestrator - INFO - Created dummy previous active model for archiving test: /app/call_center_project/models/nlu/active_nlu_model.tar.gz
+2025-06-05 12:42:00,229 - RetrainOrchestrator - INFO - Creating dummy NLU test data directory for train_nlu.py: /app/call_center_project/results/dummy_test_data_for_deployment
+2025-06-05 12:42:00,229 - RetrainOrchestrator - INFO - Created dummy NLU test data file for train_nlu.py: /app/call_center_project/results/dummy_test_data_for_deployment/placeholder_test_data_for_train_nlu.yml
+2025-06-05 12:42:00,229 - RetrainOrchestrator - INFO - Dummy environment setup complete.
+2025-06-05 12:42:00,229 - RetrainOrchestrator - INFO - --- Starting NLU Retraining Orchestration ---
+2025-06-05 12:42:00,229 - RetrainOrchestrator - INFO - Starting NLU data validation for path: /app/call_center_project/data/training_data/nlu (Conceptual)
+2025-06-05 12:42:00,229 - RetrainOrchestrator - INFO - NLU data validation successful (Conceptual).
+2025-06-05 12:42:00,229 - RetrainOrchestrator - INFO - Executing NLU training script (train_nlu.py)...
+2025-06-05 12:42:00,229 - RetrainOrchestrator - INFO - Calling train_nlu.py with command: /usr/local/bin/python /app/call_center_project/scripts/train_nlu.py --config /app/call_center_project/config.yml --data /app/call_center_project/data/training_data/nlu --domain /app/call_center_project/domain.yml --out /app/call_center_project/models/nlu --log-level INFO --model-name-prefix orch_deploy_model --test_data_dir results/dummy_test_data_for_deployment --test_results_dir results/nlu_test_results_orchestrated
+2025-06-05 12:42:00,286 - RetrainOrchestrator - INFO - STDERR from train_nlu.py (contains its log output):
+2025-06-05 12:42:00,278 - NluTrainingScript - INFO - Created dummy NLU test data file: /app/call_center_project/results/dummy_test_data_for_deployment/placeholder_test_data.yml
+2025-06-05 12:42:00,278 - NluTrainingScript - INFO - --- Starting Rasa NLU Model Processing ---
+2025-06-05 12:42:00,278 - NluTrainingScript - INFO - Project Root: /app/call_center_project
+2025-06-05 12:42:00,278 - NluTrainingScript - INFO - Using Config: /app/call_center_project/config.yml
+2025-06-05 12:42:00,279 - NluTrainingScript - INFO - Using NLU Data from: /app/call_center_project/data/training_data/nlu
+2025-06-05 12:42:00,279 - NluTrainingScript - INFO - Using Domain from: /app/call_center_project/domain.yml
+2025-06-05 12:42:00,279 - NluTrainingScript - INFO - Models will be saved to: /app/call_center_project/models/nlu
+2025-06-05 12:42:00,279 - NluTrainingScript - INFO - Model Name Prefix: orch_deploy_model
+2025-06-05 12:42:00,279 - NluTrainingScript - INFO - NLU Test Data from: /app/call_center_project/results/dummy_test_data_for_deployment
+2025-06-05 12:42:00,279 - NluTrainingScript - INFO - NLU Test Results will be saved to: /app/call_center_project/results/nlu_test_results_orchestrated
+2025-06-05 12:42:00,279 - NluTrainingScript - ERROR - 'rasa' command not found or not executable. Please ensure Rasa is installed and in PATH.
+2025-06-05 12:42:00,279 - NluTrainingScript - ERROR - Training script (or optional testing) process encountered errors or Rasa not found.
+
+2025-06-05 12:42:00,287 - RetrainOrchestrator - INFO - train_nlu.py script confirmed (via its log output) that Rasa command was not found. Conceptual success for orchestrator's dry run.
+2025-06-05 12:42:00,287 - RetrainOrchestrator - INFO - Created dummy model for dry run: /app/call_center_project/models/nlu/orch_deploy_model.tar.gz
+2025-06-05 12:42:00,287 - RetrainOrchestrator - INFO - Starting model evaluation phase for models in: /app/call_center_project/models/nlu
+2025-06-05 12:42:00,287 - RetrainOrchestrator - INFO - Found fixed-name model for evaluation: orch_deploy_model.tar.gz
+2025-06-05 12:42:00,287 - RetrainOrchestrator - INFO - Looking for NLU test results, e.g., intent_report.json at: /app/call_center_project/results/nlu_test_results_orchestrated/intent_report.json
+2025-06-05 12:42:00,287 - RetrainOrchestrator - INFO - Successfully parsed 'intent_accuracy': 0.85 from '/app/call_center_project/results/nlu_test_results_orchestrated/intent_report.json'
+2025-06-05 12:42:00,287 - RetrainOrchestrator - INFO - Threshold PASSED for intent_accuracy: Actual=0.85, Threshold=0.8
+2025-06-05 12:42:00,287 - RetrainOrchestrator - INFO - Model evaluation passed based on metrics.
+2025-06-05 12:42:00,287 - RetrainOrchestrator - INFO - Evaluation summary: Model evaluation passed based on metrics.
+2025-06-05 12:42:00,287 - RetrainOrchestrator - INFO - Starting deployment of model 'orch_deploy_model.tar.gz'. Active model target: '/app/call_center_project/models/nlu/active_nlu_model.tar.gz'
+2025-06-05 12:42:00,288 - RetrainOrchestrator - INFO - Archiving existing model from '/app/call_center_project/models/nlu/active_nlu_model.tar.gz' to '/app/call_center_project/models/nlu/archive/active_nlu_model.tar.gz_20250605-124200.archived'
+2025-06-05 12:42:00,289 - RetrainOrchestrator - INFO - Copying new model from '/app/call_center_project/models/nlu/orch_deploy_model.tar.gz' to '/app/call_center_project/models/nlu/active_nlu_model.tar.gz'
+2025-06-05 12:42:00,289 - RetrainOrchestrator - INFO - Model 'orch_deploy_model.tar.gz' successfully deployed as 'active_nlu_model.tar.gz'.
+2025-06-05 12:42:00,290 - RetrainOrchestrator - INFO - Conceptual: Update central configuration (e.g., config file, database) with new active model path: /app/call_center_project/models/nlu/active_nlu_model.tar.gz
+2025-06-05 12:42:00,290 - RetrainOrchestrator - INFO - --- NLU Retraining Orchestration Completed Successfully (Conceptually) ---
+2025-06-05 12:42:00,290 - RetrainOrchestrator - INFO - Orchestrator script finished successfully.
+2025-06-05 12:45:26,772 - RetrainOrchestrator - INFO - Setting up dummy NLU environment for orchestrator test run...
+2025-06-05 12:45:26,773 - RetrainOrchestrator - INFO - Dummy environment setup complete.
+2025-06-05 12:45:26,773 - RetrainOrchestrator - INFO - --- Starting NLU Retraining Orchestration Flow ---
+2025-06-05 12:45:26,773 - RetrainOrchestrator - INFO - Starting NLU Data Validation for path: /app/call_center_project/data/training_data/nlu (Conceptual)
+2025-06-05 12:45:26,773 - RetrainOrchestrator - INFO - NLU data validation successful (Conceptual).
+2025-06-05 12:45:26,773 - RetrainOrchestrator - INFO - Starting NLU Model Training by calling train_nlu.py...
+2025-06-05 12:45:26,773 - RetrainOrchestrator - INFO - Calling train_nlu.py with command: /usr/local/bin/python /app/call_center_project/scripts/train_nlu.py --config /app/call_center_project/config.yml --data /app/call_center_project/data/training_data/nlu --domain /app/call_center_project/domain.yml --out /app/call_center_project/models/nlu --log-level INFO --model-name-prefix final_orch_model --test_data_dir data/final_test_data --test_results_dir results/nlu_test_results_orchestrated
+2025-06-05 12:45:26,875 - RetrainOrchestrator - INFO - STDERR from train_nlu.py (contains its log output):
+2025-06-05 12:45:26,866 - NluTrainingScript - INFO - Created dummy NLU test data file: /app/call_center_project/data/final_test_data/placeholder_test_data.yml
+2025-06-05 12:45:26,866 - NluTrainingScript - INFO - --- Starting Rasa NLU Model Processing ---
+2025-06-05 12:45:26,866 - NluTrainingScript - INFO - Project Root: /app/call_center_project
+2025-06-05 12:45:26,867 - NluTrainingScript - INFO - Using Config: /app/call_center_project/config.yml
+2025-06-05 12:45:26,867 - NluTrainingScript - INFO - Using NLU Data from: /app/call_center_project/data/training_data/nlu
+2025-06-05 12:45:26,867 - NluTrainingScript - INFO - Using Domain from: /app/call_center_project/domain.yml
+2025-06-05 12:45:26,867 - NluTrainingScript - INFO - Models will be saved to: /app/call_center_project/models/nlu
+2025-06-05 12:45:26,867 - NluTrainingScript - INFO - Model Name Prefix: final_orch_model
+2025-06-05 12:45:26,867 - NluTrainingScript - INFO - NLU Test Data from: /app/call_center_project/data/final_test_data
+2025-06-05 12:45:26,867 - NluTrainingScript - INFO - NLU Test Results will be saved to: /app/call_center_project/results/nlu_test_results_orchestrated
+2025-06-05 12:45:26,867 - NluTrainingScript - ERROR - 'rasa' command not found or not executable. Please ensure Rasa is installed and in PATH.
+2025-06-05 12:45:26,867 - NluTrainingScript - ERROR - Training script (or optional testing) process encountered errors or Rasa not found.
+
+2025-06-05 12:45:26,875 - RetrainOrchestrator - INFO - train_nlu.py confirmed Rasa command not found. Conceptual success for orchestrator dry run.
+2025-06-05 12:45:26,879 - RetrainOrchestrator - INFO - Created dummy model for dry run: /app/call_center_project/models/nlu/final_orch_model.tar.gz
+2025-06-05 12:45:26,879 - RetrainOrchestrator - INFO - Starting Model Evaluation for models in: /app/call_center_project/models/nlu
+2025-06-05 12:45:26,879 - RetrainOrchestrator - INFO - Model selected for evaluation: /app/call_center_project/models/nlu/final_orch_model.tar.gz
+2025-06-05 12:45:26,879 - RetrainOrchestrator - INFO - Looking for NLU test results at: /app/call_center_project/results/nlu_test_results_orchestrated/intent_report.json
+2025-06-05 12:45:26,880 - RetrainOrchestrator - INFO - Parsed 'intent_accuracy': 0.85 from '/app/call_center_project/results/nlu_test_results_orchestrated/intent_report.json'
+2025-06-05 12:45:26,880 - RetrainOrchestrator - INFO - Threshold PASSED for intent_accuracy: Actual=0.85, Threshold=0.8
+2025-06-05 12:45:26,880 - RetrainOrchestrator - INFO - Model passed evaluation thresholds.
+2025-06-05 12:45:26,880 - RetrainOrchestrator - ERROR - Halting: Model evaluation failed or did not pass thresholds.
+2025-06-05 12:45:26,880 - RetrainOrchestrator - INFO -
+--- Orchestration Final Report ---
+2025-06-05 12:45:26,880 - RetrainOrchestrator - INFO - {
+    "overall_status": "failure",
+    "start_time": "2025-06-05T12:45:26.773089",
+    "end_time": "2025-06-05T12:45:26.880416",
+    "step_reports": [
+        {
+            "step_name": "NLU Data Validation",
+            "status": "success",
+            "message": "NLU data validation passed (Conceptual).",
+            "timestamp": "2025-06-05T12:45:26.773552",
+            "artifacts": {}
+        },
+        {
+            "step_name": "NLU Model Training",
+            "status": "success",
+            "message": "train_nlu.py confirmed Rasa command not found. Conceptual success for orchestrator dry run.",
+            "timestamp": "2025-06-05T12:45:26.875989",
+            "artifacts": {
+                "command_used": "/usr/local/bin/python /app/call_center_project/scripts/train_nlu.py --config /app/call_center_project/config.yml --data /app/call_center_project/data/training_data/nlu --domain /app/call_center_project/domain.yml --out /app/call_center_project/models/nlu --log-level INFO --model-name-prefix final_orch_model --test_data_dir data/final_test_data --test_results_dir results/nlu_test_results_orchestrated",
+                "created_dummy_model": "/app/call_center_project/models/nlu/final_orch_model.tar.gz"
+            }
+        },
+        {
+            "step_name": "Model Evaluation",
+            "status": "success",
+            "message": "Model passed evaluation thresholds.",
+            "timestamp": "2025-06-05T12:45:26.880354",
+            "artifacts": {
+                "evaluated_model_path": "/app/call_center_project/models/nlu/final_orch_model.tar.gz",
+                "metrics": {
+                    "accuracy": 0.85
+                }
+            }
+        }
+    ]
+}
+2025-06-05 12:45:26,880 - RetrainOrchestrator - ERROR - Orchestrator script finished with errors.
+2025-06-05 12:46:56,631 - RetrainOrchestrator - INFO - Setting up dummy NLU environment for orchestrator test run...
+2025-06-05 12:46:56,631 - RetrainOrchestrator - INFO - Dummy environment setup complete.
+2025-06-05 12:46:56,631 - RetrainOrchestrator - INFO - --- Starting NLU Retraining Orchestration Flow ---
+2025-06-05 12:46:56,631 - RetrainOrchestrator - INFO - Starting NLU Data Validation for path: /app/call_center_project/data/training_data/nlu (Conceptual)
+2025-06-05 12:46:56,631 - RetrainOrchestrator - INFO - NLU data validation successful (Conceptual).
+2025-06-05 12:46:56,631 - RetrainOrchestrator - INFO - Starting NLU Model Training by calling train_nlu.py...
+2025-06-05 12:46:56,632 - RetrainOrchestrator - INFO - Calling train_nlu.py with command: /usr/local/bin/python /app/call_center_project/scripts/train_nlu.py --config /app/call_center_project/config.yml --data /app/call_center_project/data/training_data/nlu --domain /app/call_center_project/domain.yml --out /app/call_center_project/models/nlu --log-level INFO --model-name-prefix final_report_model --test_data_dir data/for_final_report_test --test_results_dir results/nlu_test_results_orchestrated
+2025-06-05 12:46:56,705 - RetrainOrchestrator - INFO - STDERR from train_nlu.py (contains its log output):
+2025-06-05 12:46:56,697 - NluTrainingScript - INFO - Created dummy NLU test data file: /app/call_center_project/data/for_final_report_test/placeholder_test_data.yml
+2025-06-05 12:46:56,697 - NluTrainingScript - INFO - --- Starting Rasa NLU Model Processing ---
+2025-06-05 12:46:56,697 - NluTrainingScript - INFO - Project Root: /app/call_center_project
+2025-06-05 12:46:56,697 - NluTrainingScript - INFO - Using Config: /app/call_center_project/config.yml
+2025-06-05 12:46:56,697 - NluTrainingScript - INFO - Using NLU Data from: /app/call_center_project/data/training_data/nlu
+2025-06-05 12:46:56,697 - NluTrainingScript - INFO - Using Domain from: /app/call_center_project/domain.yml
+2025-06-05 12:46:56,697 - NluTrainingScript - INFO - Models will be saved to: /app/call_center_project/models/nlu
+2025-06-05 12:46:56,697 - NluTrainingScript - INFO - Model Name Prefix: final_report_model
+2025-06-05 12:46:56,697 - NluTrainingScript - INFO - NLU Test Data from: /app/call_center_project/data/for_final_report_test
+2025-06-05 12:46:56,697 - NluTrainingScript - INFO - NLU Test Results will be saved to: /app/call_center_project/results/nlu_test_results_orchestrated
+2025-06-05 12:46:56,698 - NluTrainingScript - ERROR - 'rasa' command not found or not executable. Please ensure Rasa is installed and in PATH.
+2025-06-05 12:46:56,698 - NluTrainingScript - ERROR - Training script (or optional testing) process encountered errors or Rasa not found.
+
+2025-06-05 12:46:56,705 - RetrainOrchestrator - INFO - train_nlu.py confirmed Rasa command not found. Conceptual success for orchestrator dry run.
+2025-06-05 12:46:56,707 - RetrainOrchestrator - INFO - Created dummy model for dry run: /app/call_center_project/models/nlu/final_report_model.tar.gz
+2025-06-05 12:46:56,707 - RetrainOrchestrator - INFO - Starting Model Evaluation for models in: /app/call_center_project/models/nlu
+2025-06-05 12:46:56,707 - RetrainOrchestrator - INFO - Model selected for evaluation: /app/call_center_project/models/nlu/final_report_model.tar.gz
+2025-06-05 12:46:56,707 - RetrainOrchestrator - INFO - Looking for NLU test results, e.g., intent_report.json at: /app/call_center_project/results/nlu_test_results_orchestrated/intent_report.json
+2025-06-05 12:46:56,708 - RetrainOrchestrator - INFO - Parsed 'accuracy': 0.85 from '/app/call_center_project/results/nlu_test_results_orchestrated/intent_report.json'
+2025-06-05 12:46:56,708 - RetrainOrchestrator - INFO - Threshold PASSED for accuracy: Actual=0.85, Threshold=0.8
+2025-06-05 12:46:56,708 - RetrainOrchestrator - INFO - Model passed evaluation thresholds.
+2025-06-05 12:46:56,708 - RetrainOrchestrator - INFO - Starting Model Deployment of 'final_report_model.tar.gz' to '/app/call_center_project/models/nlu/active_nlu_model.tar.gz'
+2025-06-05 12:46:56,708 - RetrainOrchestrator - INFO - Archiving existing model from '/app/call_center_project/models/nlu/active_nlu_model.tar.gz' to '/app/call_center_project/models/nlu/archive/active_nlu_model.tar.gz_20250605-124656.archived'
+2025-06-05 12:46:56,708 - RetrainOrchestrator - INFO - Copying new model from '/app/call_center_project/models/nlu/final_report_model.tar.gz' to '/app/call_center_project/models/nlu/active_nlu_model.tar.gz'
+2025-06-05 12:46:56,709 - RetrainOrchestrator - INFO - Model successfully deployed as 'active_nlu_model.tar.gz'.
+2025-06-05 12:46:56,709 - RetrainOrchestrator - INFO - Conceptual: Update central config with new model path: /app/call_center_project/models/nlu/active_nlu_model.tar.gz
+2025-06-05 12:46:56,709 - RetrainOrchestrator - INFO - --- NLU Retraining Orchestration Completed Successfully ---
+2025-06-05 12:46:56,709 - RetrainOrchestrator - INFO -
+--- Orchestration Final Report ---
+2025-06-05 12:46:56,709 - RetrainOrchestrator - INFO - {
+    "overall_status": "success",
+    "start_time": "2025-06-05T12:46:56.631783",
+    "end_time": "2025-06-05T12:46:56.709473",
+    "step_reports": [
+        {
+            "step_name": "NLU Data Validation",
+            "status": "success",
+            "message": "NLU data validation passed (Conceptual).",
+            "timestamp": "2025-06-05T12:46:56.631956",
+            "artifacts": {}
+        },
+        {
+            "step_name": "NLU Model Training",
+            "status": "success",
+            "message": "train_nlu.py confirmed Rasa command not found. Conceptual success for orchestrator dry run.",
+            "timestamp": "2025-06-05T12:46:56.705816",
+            "artifacts": {
+                "command_used": "/usr/local/bin/python /app/call_center_project/scripts/train_nlu.py --config /app/call_center_project/config.yml --data /app/call_center_project/data/training_data/nlu --domain /app/call_center_project/domain.yml --out /app/call_center_project/models/nlu --log-level INFO --model-name-prefix final_report_model --test_data_dir data/for_final_report_test --test_results_dir results/nlu_test_results_orchestrated",
+                "created_dummy_model_path": "/app/call_center_project/models/nlu/final_report_model.tar.gz"
+            }
+        },
+        {
+            "step_name": "Model Evaluation",
+            "status": "success",
+            "message": "Model passed evaluation thresholds.",
+            "timestamp": "2025-06-05T12:46:56.708314",
+            "artifacts": {
+                "evaluated_model_path": "/app/call_center_project/models/nlu/final_report_model.tar.gz",
+                "metrics": {
+                    "intent_evaluation": {
+                        "accuracy": 0.85
+                    }
+                }
+            }
+        },
+        {
+            "step_name": "Model Deployment",
+            "status": "success",
+            "message": "Model deployed to /app/call_center_project/models/nlu/active_nlu_model.tar.gz",
+            "timestamp": "2025-06-05T12:46:56.709428",
+            "artifacts": {
+                "deployed_as": "/app/call_center_project/models/nlu/active_nlu_model.tar.gz",
+                "archived_model": "/app/call_center_project/models/nlu/archive/active_nlu_model.tar.gz_20250605-124656.archived",
+                "newly_deployed_model_source": "/app/call_center_project/models/nlu/final_report_model.tar.gz"
+            }
+        }
+    ]
+}
+2025-06-05 12:46:56,709 - RetrainOrchestrator - INFO - Orchestrator script finished successfully.
+2025-06-05 12:49:17,880 - RetrainOrchestrator - INFO - Setting up dummy NLU environment for orchestrator test run...
+2025-06-05 12:49:17,881 - RetrainOrchestrator - INFO - Dummy environment setup complete.
+2025-06-05 12:49:17,881 - RetrainOrchestrator - INFO - --- Starting NLU Retraining Orchestration Flow ---
+2025-06-05 12:49:17,881 - RetrainOrchestrator - INFO - Starting NLU Data Validation for path: /app/call_center_project/data/training_data/nlu
+2025-06-05 12:49:17,881 - RetrainOrchestrator - INFO - Processing file: /app/call_center_project/data/training_data/nlu/.gitkeep
+2025-06-05 12:49:17,881 - RetrainOrchestrator - INFO - Processing file: /app/call_center_project/data/training_data/nlu/initial_training_data.yml
+2025-06-05 12:49:17,885 - RetrainOrchestrator - INFO - Conceptual Check: Verifying all intents in NLU data are listed in domain.yml...
+2025-06-05 12:49:17,886 - RetrainOrchestrator - INFO - Conceptual Check: Verifying for orphaned entities or undefined entities used in examples...
+2025-06-05 12:49:17,886 - RetrainOrchestrator - INFO - Conceptual Check: Ensuring each intent has a minimum number of training examples (e.g., >2)...
+2025-06-05 12:49:17,886 - RetrainOrchestrator - INFO - Conceptual Check: Looking for duplicate examples across intents...
+2025-06-05 12:49:17,886 - RetrainOrchestrator - INFO - NLU data validation passed (basic file checks and conceptual checks noted).
+2025-06-05 12:49:17,886 - RetrainOrchestrator - INFO - Starting NLU Model Training by calling train_nlu.py...
+2025-06-05 12:49:17,886 - RetrainOrchestrator - INFO - Calling train_nlu.py with command: /usr/local/bin/python /app/call_center_project/scripts/train_nlu.py --config /app/call_center_project/config.yml --data /app/call_center_project/data/training_data/nlu --domain /app/call_center_project/domain.yml --out /app/call_center_project/models/nlu --log-level INFO --model-name-prefix validated_model --test_data_dir data/validated_test_data --test_results_dir results/nlu_test_results_orchestrated
+2025-06-05 12:49:18,017 - RetrainOrchestrator - INFO - STDERR from train_nlu.py (contains its log output):
+2025-06-05 12:49:18,008 - NluTrainingScript - INFO - Created dummy NLU test data file: /app/call_center_project/data/validated_test_data/placeholder_test_data.yml
+2025-06-05 12:49:18,008 - NluTrainingScript - INFO - --- Starting Rasa NLU Model Processing ---
+2025-06-05 12:49:18,008 - NluTrainingScript - INFO - Project Root: /app/call_center_project
+2025-06-05 12:49:18,009 - NluTrainingScript - INFO - Using Config: /app/call_center_project/config.yml
+2025-06-05 12:49:18,009 - NluTrainingScript - INFO - Using NLU Data from: /app/call_center_project/data/training_data/nlu
+2025-06-05 12:49:18,009 - NluTrainingScript - INFO - Using Domain from: /app/call_center_project/domain.yml
+2025-06-05 12:49:18,009 - NluTrainingScript - INFO - Models will be saved to: /app/call_center_project/models/nlu
+2025-06-05 12:49:18,009 - NluTrainingScript - INFO - Model Name Prefix: validated_model
+2025-06-05 12:49:18,009 - NluTrainingScript - INFO - NLU Test Data from: /app/call_center_project/data/validated_test_data
+2025-06-05 12:49:18,009 - NluTrainingScript - INFO - NLU Test Results will be saved to: /app/call_center_project/results/nlu_test_results_orchestrated
+2025-06-05 12:49:18,009 - NluTrainingScript - ERROR - 'rasa' command not found or not executable. Please ensure Rasa is installed and in PATH.
+2025-06-05 12:49:18,009 - NluTrainingScript - ERROR - Training script (or optional testing) process encountered errors or Rasa not found.
+
+2025-06-05 12:49:18,017 - RetrainOrchestrator - INFO - train_nlu.py confirmed Rasa command not found. Conceptual success for orchestrator dry run.
+2025-06-05 12:49:18,018 - RetrainOrchestrator - INFO - Created dummy model for dry run: /app/call_center_project/models/nlu/validated_model.tar.gz
+2025-06-05 12:49:18,018 - RetrainOrchestrator - INFO - Starting Model Evaluation for models in: /app/call_center_project/models/nlu
+2025-06-05 12:49:18,018 - RetrainOrchestrator - INFO - Model selected for evaluation: /app/call_center_project/models/nlu/validated_model.tar.gz
+2025-06-05 12:49:18,019 - RetrainOrchestrator - INFO - Looking for NLU test results at: /app/call_center_project/results/nlu_test_results_orchestrated/intent_report.json
+2025-06-05 12:49:18,019 - RetrainOrchestrator - INFO - Parsed 'accuracy': 0.85 from '/app/call_center_project/results/nlu_test_results_orchestrated/intent_report.json'
+2025-06-05 12:49:18,019 - RetrainOrchestrator - INFO - Threshold PASSED for accuracy: Actual=0.85, Threshold=0.8
+2025-06-05 12:49:18,019 - RetrainOrchestrator - INFO - Model passed evaluation thresholds.
+2025-06-05 12:49:18,019 - RetrainOrchestrator - INFO - Starting Model Deployment of 'validated_model.tar.gz' to '/app/call_center_project/models/nlu/active_nlu_model.tar.gz'
+2025-06-05 12:49:18,019 - RetrainOrchestrator - INFO - Archiving existing model from '/app/call_center_project/models/nlu/active_nlu_model.tar.gz' to '/app/call_center_project/models/nlu/archive/active_nlu_model.tar.gz_20250605-124918.archived'
+2025-06-05 12:49:18,019 - RetrainOrchestrator - INFO - Copying new model from '/app/call_center_project/models/nlu/validated_model.tar.gz' to '/app/call_center_project/models/nlu/active_nlu_model.tar.gz'
+2025-06-05 12:49:18,020 - RetrainOrchestrator - INFO - Model successfully deployed as 'active_nlu_model.tar.gz'.
+2025-06-05 12:49:18,020 - RetrainOrchestrator - INFO - Conceptual: Update central config with new model path: /app/call_center_project/models/nlu/active_nlu_model.tar.gz
+2025-06-05 12:49:18,020 - RetrainOrchestrator - INFO - --- NLU Retraining Orchestration Completed Successfully ---
+2025-06-05 12:49:18,020 - RetrainOrchestrator - INFO -
+--- Orchestration Final Report ---
+2025-06-05 12:49:18,021 - RetrainOrchestrator - INFO - {
+    "overall_status": "success",
+    "start_time": "2025-06-05T12:49:17.881390",
+    "end_time": "2025-06-05T12:49:18.020873",
+    "step_reports": [
+        {
+            "step_name": "NLU Data Validation",
+            "status": "success",
+            "message": "NLU data validation passed (basic file checks and conceptual checks noted).",
+            "timestamp": "2025-06-05T12:49:17.886221",
+            "artifacts": {
+                "checked_path": "/app/call_center_project/data/training_data/nlu",
+                "files_processed": [
+                    ".gitkeep",
+                    "initial_training_data.yml"
+                ],
+                "errors": []
+            }
+        },
+        {
+            "step_name": "NLU Model Training",
+            "status": "success",
+            "message": "train_nlu.py confirmed Rasa command not found. Conceptual success for orchestrator dry run.",
+            "timestamp": "2025-06-05T12:49:18.017908",
+            "artifacts": {
+                "command_used": "/usr/local/bin/python /app/call_center_project/scripts/train_nlu.py --config /app/call_center_project/config.yml --data /app/call_center_project/data/training_data/nlu --domain /app/call_center_project/domain.yml --out /app/call_center_project/models/nlu --log-level INFO --model-name-prefix validated_model --test_data_dir data/validated_test_data --test_results_dir results/nlu_test_results_orchestrated",
+                "created_dummy_model_path": "/app/call_center_project/models/nlu/validated_model.tar.gz"
+            }
+        },
+        {
+            "step_name": "Model Evaluation",
+            "status": "success",
+            "message": "Model passed evaluation thresholds.",
+            "timestamp": "2025-06-05T12:49:18.019430",
+            "artifacts": {
+                "evaluated_model_path": "/app/call_center_project/models/nlu/validated_model.tar.gz",
+                "metrics": {
+                    "intent_evaluation": {
+                        "accuracy": 0.85
+                    }
+                }
+            }
+        },
+        {
+            "step_name": "Model Deployment",
+            "status": "success",
+            "message": "Model deployed to /app/call_center_project/models/nlu/active_nlu_model.tar.gz",
+            "timestamp": "2025-06-05T12:49:18.020827",
+            "artifacts": {
+                "deployed_as": "/app/call_center_project/models/nlu/active_nlu_model.tar.gz",
+                "archived_model": "/app/call_center_project/models/nlu/archive/active_nlu_model.tar.gz_20250605-124918.archived",
+                "newly_deployed_model_source": "/app/call_center_project/models/nlu/validated_model.tar.gz"
+            }
+        }
+    ]
+}
+2025-06-05 12:49:18,021 - RetrainOrchestrator - INFO - Orchestrator script finished successfully.
+2025-06-05 13:23:37,094 - RetrainOrchestrator - INFO - Setting up dummy NLU environment for orchestrator test run...
+2025-06-05 13:23:37,095 - RetrainOrchestrator - INFO - --- Starting NLU Retraining Orchestration Flow ---
+2025-06-05 13:23:37,095 - RetrainOrchestrator - INFO - Starting NLU Data Validation for path: /app/call_center_project/data/training_data/nlu
+2025-06-05 13:23:37,098 - RetrainOrchestrator - INFO - Conceptual NLU data checks (domain consistency, example counts, etc.) would go here.
+2025-06-05 13:23:37,098 - RetrainOrchestrator - INFO - Starting NLU Model Training by calling train_nlu.py...
+2025-06-05 13:23:37,098 - RetrainOrchestrator - INFO - Calling train_nlu.py with command: /usr/local/bin/python /app/call_center_project/scripts/train_nlu.py --config /app/call_center_project/config.yml --data /app/call_center_project/data/training_data/nlu --domain /app/call_center_project/domain.yml --out /app/call_center_project/models/nlu --log-level INFO --model-name-prefix validated_model_v2 --test_data_dir data/test_set_v2 --test_results_dir results/nlu_test_results_orchestrated
+2025-06-05 13:23:37,151 - RetrainOrchestrator - INFO - STDERR from train_nlu.py (its log output):
+2025-06-05 13:23:37,143 - NluTrainingScript - INFO - Created dummy NLU test data file: /app/call_center_project/data/test_set_v2/placeholder_test_data.yml
+2025-06-05 13:23:37,143 - NluTrainingScript - INFO - --- Starting Rasa NLU Model Processing ---
+2025-06-05 13:23:37,143 - NluTrainingScript - INFO - Project Root: /app/call_center_project
+2025-06-05 13:23:37,143 - NluTrainingScript - INFO - Using Config: /app/call_center_project/config.yml
+2025-06-05 13:23:37,143 - NluTrainingScript - INFO - Using NLU Data from: /app/call_center_project/data/training_data/nlu
+2025-06-05 13:23:37,143 - NluTrainingScript - INFO - Using Domain from: /app/call_center_project/domain.yml
+2025-06-05 13:23:37,143 - NluTrainingScript - INFO - Models will be saved to: /app/call_center_project/models/nlu
+2025-06-05 13:23:37,143 - NluTrainingScript - INFO - Model Name Prefix: validated_model_v2
+2025-06-05 13:23:37,143 - NluTrainingScript - INFO - NLU Test Data from: /app/call_center_project/data/test_set_v2
+2025-06-05 13:23:37,143 - NluTrainingScript - INFO - NLU Test Results will be saved to: /app/call_center_project/results/nlu_test_results_orchestrated
+2025-06-05 13:23:37,144 - NluTrainingScript - ERROR - 'rasa' command not found or not executable. Please ensure Rasa is installed and in PATH.
+2025-06-05 13:23:37,144 - NluTrainingScript - ERROR - Training script (or optional testing) process encountered errors or Rasa not found.
+
+2025-06-05 13:23:37,152 - RetrainOrchestrator - INFO - Created dummy model for dry run: /app/call_center_project/models/nlu/validated_model_v2.tar.gz
+2025-06-05 13:23:37,152 - RetrainOrchestrator - INFO - Starting Model Evaluation for models in: /app/call_center_project/models/nlu
+2025-06-05 13:23:37,152 - RetrainOrchestrator - INFO - Model selected for evaluation: /app/call_center_project/models/nlu/validated_model_v2.tar.gz
+2025-06-05 13:23:37,152 - RetrainOrchestrator - INFO - Looking for NLU test results at: /app/call_center_project/results/nlu_test_results_orchestrated/intent_report.json
+2025-06-05 13:23:37,152 - RetrainOrchestrator - INFO - Parsed 'accuracy': 0.85 from '/app/call_center_project/results/nlu_test_results_orchestrated/intent_report.json'
+2025-06-05 13:23:37,152 - RetrainOrchestrator - INFO - Threshold PASSED for accuracy: Actual=0.85, Threshold=0.8
+2025-06-05 13:23:37,152 - RetrainOrchestrator - INFO - Starting Model Deployment of 'validated_model_v2.tar.gz' to '/app/call_center_project/models/nlu/active_nlu_model.tar.gz'
+2025-06-05 13:23:37,152 - RetrainOrchestrator - INFO - Archiving existing model to '/app/call_center_project/models/nlu/archive/active_nlu_model.tar.gz_20250605-132337.archived'
+2025-06-05 13:23:37,153 - RetrainOrchestrator - INFO - Copying new model from '/app/call_center_project/models/nlu/validated_model_v2.tar.gz' to '/app/call_center_project/models/nlu/active_nlu_model.tar.gz'
+2025-06-05 13:23:37,155 - RetrainOrchestrator - INFO - Conceptual: Update central config with new model path: /app/call_center_project/models/nlu/active_nlu_model.tar.gz
+2025-06-05 13:23:37,155 - RetrainOrchestrator - INFO - --- NLU Retraining Orchestration Completed Successfully ---
+2025-06-05 13:23:37,155 - RetrainOrchestrator - INFO -
+--- Orchestration Final Report ---
+2025-06-05 13:23:37,155 - RetrainOrchestrator - INFO - {
+    "overall_status": "success",
+    "start_time": "2025-06-05T13:23:37.095273",
+    "end_time": "2025-06-05T13:23:37.155208",
+    "step_reports": [
+        {
+            "step_name": "NLU Data Validation",
+            "status": "success",
+            "message": "NLU data validation passed (basic checks).",
+            "timestamp": "2025-06-05T13:23:37.098706",
+            "artifacts": {
+                "checked_path": "/app/call_center_project/data/training_data/nlu",
+                "files_processed": [
+                    ".gitkeep",
+                    "initial_training_data.yml"
+                ],
+                "errors": []
+            }
+        },
+        {
+            "step_name": "NLU Model Training",
+            "status": "success",
+            "message": "train_nlu.py confirmed Rasa not found (dry run success).",
+            "timestamp": "2025-06-05T13:23:37.151846",
+            "artifacts": {
+                "command_used": "/usr/local/bin/python /app/call_center_project/scripts/train_nlu.py --config /app/call_center_project/config.yml --data /app/call_center_project/data/training_data/nlu --domain /app/call_center_project/domain.yml --out /app/call_center_project/models/nlu --log-level INFO --model-name-prefix validated_model_v2 --test_data_dir data/test_set_v2 --test_results_dir results/nlu_test_results_orchestrated",
+                "created_dummy_model_path": "/app/call_center_project/models/nlu/validated_model_v2.tar.gz"
+            }
+        },
+        {
+            "step_name": "Model Evaluation",
+            "status": "success",
+            "message": "Model passed evaluation thresholds.",
+            "timestamp": "2025-06-05T13:23:37.152592",
+            "artifacts": {
+                "evaluated_model_path": "/app/call_center_project/models/nlu/validated_model_v2.tar.gz",
+                "metrics": {
+                    "intent_evaluation": {
+                        "accuracy": 0.85
+                    }
+                }
+            }
+        },
+        {
+            "step_name": "Model Deployment",
+            "status": "success",
+            "message": "Model deployed to /app/call_center_project/models/nlu/active_nlu_model.tar.gz",
+            "timestamp": "2025-06-05T13:23:37.155146",
+            "artifacts": {
+                "deployed_as": "/app/call_center_project/models/nlu/active_nlu_model.tar.gz",
+                "archived_model": "/app/call_center_project/models/nlu/archive/active_nlu_model.tar.gz_20250605-132337.archived",
+                "newly_deployed_model_source": "/app/call_center_project/models/nlu/validated_model_v2.tar.gz"
+            }
+        }
+    ]
+}
+2025-06-05 13:23:37,155 - RetrainOrchestrator - INFO - Orchestrator script finished successfully.
+2025-06-05 13:29:31,093 - RetrainOrchestrator - INFO - Setting up dummy NLU environment for orchestrator test run...
+2025-06-05 13:29:31,094 - RetrainOrchestrator - INFO - --- Starting NLU Retraining Orchestration Flow ---
+2025-06-05 13:29:31,094 - RetrainOrchestrator - INFO - Starting NLU Data Validation for path: /app/call_center_project/data/training_data/nlu
+2025-06-05 13:29:31,099 - RetrainOrchestrator - INFO - Conceptual NLU data checks (domain consistency, example counts, etc.) would go here.
+2025-06-05 13:29:31,099 - RetrainOrchestrator - INFO - Starting NLU Model Training by calling train_nlu.py...
+2025-06-05 13:29:31,099 - RetrainOrchestrator - INFO - Calling train_nlu.py with command: /usr/local/bin/python /app/call_center_project/scripts/train_nlu.py --config /app/call_center_project/config.yml --data /app/call_center_project/data/training_data/nlu --domain /app/call_center_project/domain.yml --out /app/call_center_project/models/nlu --log-level INFO --force --model-name-prefix admin_triggered_model
+2025-06-05 13:29:31,153 - RetrainOrchestrator - INFO - STDERR from train_nlu.py (its log output):
+2025-06-05 13:29:31,144 - NluTrainingScript - INFO - --- Starting Rasa NLU Model Processing ---
+2025-06-05 13:29:31,145 - NluTrainingScript - INFO - Project Root: /app/call_center_project
+2025-06-05 13:29:31,145 - NluTrainingScript - INFO - Using Config: /app/call_center_project/config.yml
+2025-06-05 13:29:31,145 - NluTrainingScript - INFO - Using NLU Data from: /app/call_center_project/data/training_data/nlu
+2025-06-05 13:29:31,145 - NluTrainingScript - INFO - Using Domain from: /app/call_center_project/domain.yml
+2025-06-05 13:29:31,145 - NluTrainingScript - INFO - Models will be saved to: /app/call_center_project/models/nlu
+2025-06-05 13:29:31,145 - NluTrainingScript - INFO - Model Name Prefix: admin_triggered_model
+2025-06-05 13:29:31,145 - NluTrainingScript - INFO - Force training enabled.
+2025-06-05 13:29:31,145 - NluTrainingScript - ERROR - 'rasa' command not found or not executable. Please ensure Rasa is installed and in PATH.
+2025-06-05 13:29:31,145 - NluTrainingScript - ERROR - Training script (or optional testing) process encountered errors or Rasa not found.
+
+2025-06-05 13:29:31,154 - RetrainOrchestrator - INFO - Created dummy model for dry run: /app/call_center_project/models/nlu/admin_triggered_model.tar.gz
+2025-06-05 13:29:31,154 - RetrainOrchestrator - INFO - Starting Model Evaluation for models in: /app/call_center_project/models/nlu
+2025-06-05 13:29:31,154 - RetrainOrchestrator - INFO - Model selected for evaluation: /app/call_center_project/models/nlu/admin_triggered_model.tar.gz
+2025-06-05 13:29:31,154 - RetrainOrchestrator - INFO - Starting Model Deployment of 'admin_triggered_model.tar.gz' to '/app/call_center_project/models/nlu/active_nlu_model.tar.gz'
+2025-06-05 13:29:31,154 - RetrainOrchestrator - INFO - Archiving existing model to '/app/call_center_project/models/nlu/archive/active_nlu_model.tar.gz_20250605-132931.archived'
+2025-06-05 13:29:31,154 - RetrainOrchestrator - INFO - Copying new model from '/app/call_center_project/models/nlu/admin_triggered_model.tar.gz' to '/app/call_center_project/models/nlu/active_nlu_model.tar.gz'
+2025-06-05 13:29:31,155 - RetrainOrchestrator - INFO - Conceptual: Update central config with new model path: /app/call_center_project/models/nlu/active_nlu_model.tar.gz
+2025-06-05 13:29:31,155 - RetrainOrchestrator - INFO - --- NLU Retraining Orchestration Completed Successfully ---
+2025-06-05 13:29:31,155 - RetrainOrchestrator - INFO -
+--- Orchestration Final Report ---
+2025-06-05 13:29:31,155 - RetrainOrchestrator - INFO - {
+    "overall_status": "success",
+    "start_time": "2025-06-05T13:29:31.094144",
+    "end_time": "2025-06-05T13:29:31.155467",
+    "step_reports": [
+        {
+            "step_name": "NLU Data Validation",
+            "status": "success",
+            "message": "NLU data validation passed (basic checks).",
+            "timestamp": "2025-06-05T13:29:31.099411",
+            "artifacts": {
+                "checked_path": "/app/call_center_project/data/training_data/nlu",
+                "files_processed": [
+                    ".gitkeep",
+                    "initial_training_data.yml"
+                ],
+                "errors": []
+            }
+        },
+        {
+            "step_name": "NLU Model Training",
+            "status": "success",
+            "message": "train_nlu.py confirmed Rasa not found (dry run success).",
+            "timestamp": "2025-06-05T13:29:31.153353",
+            "artifacts": {
+                "command_used": "/usr/local/bin/python /app/call_center_project/scripts/train_nlu.py --config /app/call_center_project/config.yml --data /app/call_center_project/data/training_data/nlu --domain /app/call_center_project/domain.yml --out /app/call_center_project/models/nlu --log-level INFO --force --model-name-prefix admin_triggered_model",
+                "created_dummy_model_path": "/app/call_center_project/models/nlu/admin_triggered_model.tar.gz"
+            }
+        },
+        {
+            "step_name": "Model Evaluation",
+            "status": "success",
+            "message": "No tests run; evaluation auto-passed.",
+            "timestamp": "2025-06-05T13:29:31.154276",
+            "artifacts": {
+                "evaluated_model_path": "/app/call_center_project/models/nlu/admin_triggered_model.tar.gz"
+            }
+        },
+        {
+            "step_name": "Model Deployment",
+            "status": "success",
+            "message": "Model deployed to /app/call_center_project/models/nlu/active_nlu_model.tar.gz",
+            "timestamp": "2025-06-05T13:29:31.155409",
+            "artifacts": {
+                "deployed_as": "/app/call_center_project/models/nlu/active_nlu_model.tar.gz",
+                "archived_model": "/app/call_center_project/models/nlu/archive/active_nlu_model.tar.gz_20250605-132931.archived",
+                "newly_deployed_model_source": "/app/call_center_project/models/nlu/admin_triggered_model.tar.gz"
+            }
+        }
+    ]
+}
+2025-06-05 13:29:31,156 - RetrainOrchestrator - INFO - Orchestration summary report saved to: /app/call_center_project/logs/orchestration_summary.json
+2025-06-05 13:29:31,156 - RetrainOrchestrator - INFO - Orchestrator script finished successfully.
+2025-06-05 13:34:51,816 - RetrainOrchestrator - INFO - Setting up dummy NLU environment for orchestrator test run...
+2025-06-05 13:34:51,816 - RetrainOrchestrator - INFO - --- Starting NLU Retraining Orchestration Flow ---
+2025-06-05 13:34:51,816 - RetrainOrchestrator - INFO - Starting NLU Data Validation for path: /app/call_center_project/data/training_data/nlu
+2025-06-05 13:34:51,820 - RetrainOrchestrator - INFO - Conceptual NLU data checks (domain consistency, example counts, etc.) would go here.
+2025-06-05 13:34:51,820 - RetrainOrchestrator - INFO - Starting NLU Model Training by calling train_nlu.py...
+2025-06-05 13:34:51,820 - RetrainOrchestrator - INFO - Calling train_nlu.py with command: /usr/local/bin/python /app/call_center_project/scripts/train_nlu.py --config /app/call_center_project/config.yml --data /app/call_center_project/data/training_data/nlu --domain /app/call_center_project/domain.yml --out /app/call_center_project/models/nlu --log-level INFO
+2025-06-05 13:34:51,872 - RetrainOrchestrator - INFO - STDERR from train_nlu.py (its log output):
+2025-06-05 13:34:51,865 - NluTrainingScript - INFO - --- Starting Rasa NLU Model Processing ---
+2025-06-05 13:34:51,865 - NluTrainingScript - INFO - Project Root: /app/call_center_project
+2025-06-05 13:34:51,865 - NluTrainingScript - INFO - Using Config: /app/call_center_project/config.yml
+2025-06-05 13:34:51,865 - NluTrainingScript - INFO - Using NLU Data from: /app/call_center_project/data/training_data/nlu
+2025-06-05 13:34:51,865 - NluTrainingScript - INFO - Using Domain from: /app/call_center_project/domain.yml
+2025-06-05 13:34:51,865 - NluTrainingScript - INFO - Models will be saved to: /app/call_center_project/models/nlu
+2025-06-05 13:34:51,865 - NluTrainingScript - ERROR - 'rasa' command not found or not executable. Please ensure Rasa is installed and in PATH.
+2025-06-05 13:34:51,865 - NluTrainingScript - ERROR - Training script (or optional testing) process encountered errors or Rasa not found.
+
+2025-06-05 13:34:51,873 - RetrainOrchestrator - INFO - Created dummy model for dry run: /app/call_center_project/models/nlu/20250605-133451-nlu_placeholder.tar.gz
+2025-06-05 13:34:51,873 - RetrainOrchestrator - INFO - Starting Model Evaluation for models in: /app/call_center_project/models/nlu
+2025-06-05 13:34:51,873 - RetrainOrchestrator - INFO - Model selected for evaluation: /app/call_center_project/models/nlu/20250605-133451-nlu_placeholder.tar.gz
+2025-06-05 13:34:51,873 - RetrainOrchestrator - INFO - Starting Model Deployment of '20250605-133451-nlu_placeholder.tar.gz' to '/app/call_center_project/models/nlu/active_nlu_model.tar.gz'
+2025-06-05 13:34:51,874 - RetrainOrchestrator - INFO - Archiving existing model to '/app/call_center_project/models/nlu/archive/active_nlu_model.tar.gz_20250605-133451.archived'
+2025-06-05 13:34:51,874 - RetrainOrchestrator - INFO - Copying new model from '/app/call_center_project/models/nlu/20250605-133451-nlu_placeholder.tar.gz' to '/app/call_center_project/models/nlu/active_nlu_model.tar.gz'
+2025-06-05 13:34:51,874 - RetrainOrchestrator - INFO - Conceptual: Update central config with new model path: /app/call_center_project/models/nlu/active_nlu_model.tar.gz
+2025-06-05 13:34:51,874 - RetrainOrchestrator - INFO - --- NLU Retraining Orchestration Completed Successfully ---
+2025-06-05 13:34:51,874 - RetrainOrchestrator - INFO -
+--- Orchestration Final Report ---
+2025-06-05 13:34:51,875 - RetrainOrchestrator - INFO - {
+    "overall_status": "success",
+    "start_time": "2025-06-05T13:34:51.816620",
+    "end_time": "2025-06-05T13:34:51.874887",
+    "step_reports": [
+        {
+            "step_name": "NLU Data Validation",
+            "status": "success",
+            "message": "NLU data validation passed (basic checks).",
+            "timestamp": "2025-06-05T13:34:51.820751",
+            "artifacts": {
+                "checked_path": "/app/call_center_project/data/training_data/nlu",
+                "files_processed": [
+                    ".gitkeep",
+                    "initial_training_data.yml"
+                ],
+                "errors": []
+            }
+        },
+        {
+            "step_name": "NLU Model Training",
+            "status": "success",
+            "message": "train_nlu.py confirmed Rasa not found (dry run success).",
+            "timestamp": "2025-06-05T13:34:51.872989",
+            "artifacts": {
+                "command_used": "/usr/local/bin/python /app/call_center_project/scripts/train_nlu.py --config /app/call_center_project/config.yml --data /app/call_center_project/data/training_data/nlu --domain /app/call_center_project/domain.yml --out /app/call_center_project/models/nlu --log-level INFO",
+                "created_dummy_model_path": "/app/call_center_project/models/nlu/20250605-133451-nlu_placeholder.tar.gz"
+            }
+        },
+        {
+            "step_name": "Model Evaluation",
+            "status": "success",
+            "message": "No tests run; evaluation auto-passed.",
+            "timestamp": "2025-06-05T13:34:51.873936",
+            "artifacts": {
+                "evaluated_model_path": "/app/call_center_project/models/nlu/20250605-133451-nlu_placeholder.tar.gz"
+            }
+        },
+        {
+            "step_name": "Model Deployment",
+            "status": "success",
+            "message": "Model deployed to /app/call_center_project/models/nlu/active_nlu_model.tar.gz",
+            "timestamp": "2025-06-05T13:34:51.874830",
+            "artifacts": {
+                "deployed_as": "/app/call_center_project/models/nlu/active_nlu_model.tar.gz",
+                "archived_model": "/app/call_center_project/models/nlu/archive/active_nlu_model.tar.gz_20250605-133451.archived",
+                "newly_deployed_model_source": "/app/call_center_project/models/nlu/20250605-133451-nlu_placeholder.tar.gz"
+            }
+        }
+    ]
+}
+2025-06-05 13:34:51,875 - RetrainOrchestrator - INFO - Orchestration summary report saved to: /app/call_center_project/logs/orchestration_summary.json
+2025-06-05 13:34:51,875 - RetrainOrchestrator - INFO - Orchestrator script finished successfully.

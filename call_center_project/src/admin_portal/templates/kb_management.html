@@ -1,0 +1,71 @@
+{% extends "base.html" %} <!-- Jinja2 comment: Assuming base.html exists -->
+
+{% block title %}Knowledge Base Management{% endblock %}
+
+{% block content %}
+    <h1>Knowledge Base Management</h1>
+
+    <p>View, add, edit, or delete FAQs and Troubleshooting Solutions from the Knowledge Base.</p>
+
+    <hr>
+    <h2>FAQs</h2>
+    <p><a href="/kb/faq/add">Add New FAQ</a></p>
+    <div>
+        <!--
+        Conceptual loop for FAQs.
+        In Flask, this would be:
+        {% for faq in faqs_list %}
+            <div>
+                <strong>ID:</strong> {{ faq.id }}<br>
+                <strong>Intent:</strong> {{ faq.intent | default('N/A') }}<br>
+                <strong>Question Snippet:</strong> {{ faq.question_variants[0] if faq.question_variants else 'N/A' }}<br>
+                <strong>Answer Snippet:</strong> {{ faq.answer[:60] if faq.answer else 'N/A' }}...<br>
+                <a href="/kb/faq/edit/{{ faq.id }}">Edit</a> |
+                <a href="/kb/faq/delete/{{ faq.id }}" onclick="return confirm('Are you sure you want to delete FAQ {{ faq.id }}?');">Delete</a>
+                <hr style="border-top: 1px dashed #ccc;">
+            </div>
+        {% else %}
+            <p>No FAQs found or unable to load FAQs.</p>
+        {% endfor %}
+
+        The app.py placeholder generates this list as an HTML string directly.
+        The placeholder below is for app.py to inject its generated HTML list for FAQs.
+        -->
+        <h3>FAQ List:</h3>
+        <div id="faqListContainer">
+            {{ faqs_summary_html_placeholder | safe if faqs_summary_html_placeholder else "<p>Loading FAQs...</p>" }}
+        </div>
+    </div>
+
+    <hr style="margin-top: 30px; border-top: 1px solid #000;">
+
+    <h2>Solutions</h2>
+    <p><a href="/kb/solution/add">Add New Solution</a></p>
+    <div>
+        <!--
+        Conceptual loop for Solutions.
+        In Flask, this would be:
+        {% for sol in solutions_list %}
+            <div>
+                <strong>ID:</strong> {{ sol.id }}<br>
+                <strong>Problem:</strong> {{ sol.problem_description | default('N/A') }}<br>
+                <strong>Related Intent:</strong> {{ sol.related_intent | default('N/A') }}<br>
+                <strong>Number of Steps:</strong> {{ sol.steps | length if sol.steps else 0 }}<br>
+                <a href="/kb/solution/edit/{{ sol.id }}">Edit</a> |
+                <a href="/kb/solution/delete/{{ sol.id }}" onclick="return confirm('Are you sure you want to delete Solution {{ sol.id }}?');">Delete</a>
+                <hr style="border-top: 1px dashed #ccc;">
+            </div>
+        {% else %}
+            <p>No solutions found or unable to load solutions.</p>
+        {% endfor %}
+
+        The placeholder below is for app.py to inject its generated HTML list for Solutions.
+        -->
+        <h3>Solution List:</h3>
+        <div id="solutionListContainer">
+            {{ solutions_summary_html_placeholder | safe if solutions_summary_html_placeholder else "<p>Loading Solutions...</p>" }}
+        </div>
+    </div>
+
+    <p style="margin-top: 30px;"><a href="/">Back to Dashboard</a></p>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "base.html" %} <!-- Jinja2 comment: Assuming base.html exists and has a content block -->
+
+{% block title %}View Transcript: {{ filename }}{% endblock %} <!-- Jinja2 comment: filename passed from route -->
+
+{% block content %}
+    <h1>Transcript: {{ filename }}</h1> <!-- Jinja2 comment: filename passed from route -->
+
+    <!-- Conceptual link back to the recordings list for STT files -->
+    <p><a href="/manage_recordings_stt">&laquo; Back to Transcribed Recordings List</a></p>
+    <hr>
+
+    <h2>Transcript Content:</h2>
+    <pre>
+{{ content }} <!-- Jinja2 comment: content of the transcript file passed from route -->
+    </pre>
+
+    <p><a href="/manage_recordings_stt">&laquo; Back to Transcribed Recordings List</a></p>
+{% endblock %}

@@ -1,30 +1,5 @@
+
 solutions:
   - id: sol_internet_no_connection
     problem_description: "No internet connection"
-    related_intent: report_issue
-    related_entities:
-      - service_type: internet
-      - issue_type: no_connection
-    steps:
-      - text: "I'm sorry to hear you're having trouble with your internet. Let's try a few things."
-      - text: "First, could you please restart your modem and router? Unplug them from power, wait for 30 seconds, then plug the modem back in first. Wait for it to fully connect, then plug in the router."
-        action_suggestion: "wait_for_customer_action"
-      - text: "If that doesn't work, please check if there are any service outages reported in your area on our website at [Your Company Website]/outages."
-        action_suggestion: "provide_link"
-      - text: "If there are no outages and restarting didn't help, we might need to look into this further. Can you provide your account number?"
-        action_suggestion: "request_info:account_number"
-    tags: ["internet", "troubleshooting", "no connection", "outage"]
-
-  - id: sol_mobile_no_signal
-    problem_description: "No mobile signal"
-    related_intent: report_issue
-    related_entities:
-      - service_type: mobile
-      - issue_type: no_signal
-    steps:
-      - text: "If you're experiencing no mobile signal, please first try restarting your phone."
-      - text: "Also, check if you are in an area with known coverage. You can see our coverage map at [Your Company Website]/coverage."
-      - text: "Ensure your SIM card is properly inserted."
-      - text: "If these steps don't help, please let me know your current location (e.g., address or zip code) so I can check for localized issues."
-        action_suggestion: "request_info:location"
-    tags: ["mobile", "troubleshooting", "no signal", "coverage"]
+    steps: [{text: "Restart modem."}]

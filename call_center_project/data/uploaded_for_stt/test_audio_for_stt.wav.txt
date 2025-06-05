@@ -1,0 +1,1 @@
+This is a simulated transcript for test_audio_for_stt.wav.

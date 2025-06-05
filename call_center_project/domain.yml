@@ -1,0 +1,71 @@
+# Placeholder Rasa domain file (domain.yml)
+# For NLU-only training, this mainly lists intents and entities the model should be aware of.
+# For full dialogue management (Rasa Core), it would also include slots, responses, actions, etc.
+
+version: "3.1" # Specifies the version of the Rasa domain format.
+
+intents:
+  # This list should ideally be kept in sync with your NLU training data files.
+  # Intents defined in your NLU training data (e.g., initial_training_data.yml)
+  - greet
+  - goodbye
+  - ask_service_status
+  - report_issue
+  - get_billing_info # From initial_training_data.yml
+  # Additional intents that might be in the system or planned:
+  - thank_you        # Example from ResponseGenerator's hardcoded responses
+  - generic_reply    # Example from CallSession's E2E test simulation
+  - ask_internet_plan # From E2E test's specific NLU data
+  # Add any other intents your NLU model should recognize.
+  # If an intent is in your training data but not listed here, Rasa might issue a warning
+  # or handle it based on its internal defaults, but it's good practice to list them.
+
+entities:
+  # List all entities that your NLU model extracts.
+  # This helps Rasa understand the full scope of entities it might encounter.
+  - service_type     # From initial_training_data.yml
+  - location         # From initial_training_data.yml
+  - address          # From initial_training_data.yml
+  - billing_property # From initial_training_data.yml
+  - issue_type       # From initial_training_data.yml (conceptual for report_issue)
+  # Add other entities from your NLU data or those planned.
+
+# For NLU-only training, the following sections are often not strictly required by "rasa train nlu",
+# but are included here for completeness if you expand to Rasa Core for dialogue management.
+# Having them present, even if empty, can also prevent some warnings with certain Rasa versions or commands.
+
+# slots:
+  # Define slots if you plan to use Rasa Core for dialogue management.
+  # Slots are the bot's memory, storing pieces of information.
+  # Example:
+  #   user_account_number:
+  #     type: text
+  #     influence_conversation: false # or true if it should affect dialogue flow
+
+# responses:
+  # Define bot responses (utterances) if using Rasa Core's response selector or templates.
+  # Example:
+  #   utter_greet:
+  #   - text: "Hello! How can I help you today?"
+  #   utter_goodbye:
+  #   - text: "Goodbye! Have a great day."
+
+# actions:
+  # Define custom actions if using Rasa Core.
+  # Custom actions are Python code that the bot can execute.
+  # Example:
+  # - action_check_service_status
+  # - action_lookup_billing_info
+
+# forms:
+  # Define forms for slot filling if using Rasa Core.
+  # Example:
+  #   report_issue_form:
+  #     required_slots:
+  #       - service_type
+  #       - issue_description
+
+# session_config:
+#   session_expiration_time: 60  # Value in minutes (default is 60)
+#   carry_over_slots_to_new_session: true # Default is true
+#   # Defines how long a conversation session should last and if slots should carry over.

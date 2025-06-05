@@ -1,0 +1,57 @@
+# Placeholder Rasa NLU configuration (config.yml)
+# See Rasa documentation for more details: https://rasa.com/docs/rasa/tuning-your-model/
+
+language: en
+
+pipeline:
+  # Example pipeline for English. You might need to customize this.
+  # This is a common pipeline for intent classification and entity extraction.
+  - name: WhitespaceTokenizer
+    # Splits sentence into tokens based on whitespace.
+  - name: RegexFeaturizer
+    # Creates features for regular expressions. Useful for patterns like zip codes, email addresses.
+  - name: LexicalSyntacticFeaturizer
+    # Creates features based on the lexical and syntactic structure of a sentence.
+    # E.g., word shapes, part-of-speech tags (if language model provides them).
+  - name: CountVectorsFeaturizer
+    # Creates bag-of-words representations for words and n-grams.
+    # analyzer: "char_wb" # Can be useful for handling typos by creating character n-grams.
+    # min_ngram: 1
+    # max_ngram: 4
+  - name: DIETClassifier
+    epochs: 100 # Adjust epochs as needed; more epochs can lead to better accuracy but longer training.
+                # For initial testing, a smaller number (e.g., 30-50) might be faster.
+    # entity_recognition: True # Ensure entities are recognized. Default is True.
+    # Other DIETClassifier parameters can be tuned here, e.g.:
+    # random_seed: 42
+    # learning_rate: 0.001
+    # batch_size: [64, 256]
+    # hidden_layers_sizes:
+    #   text: [256, 128]
+  # - name: EntitySynonymMapper # Uncomment if you use synonyms in your NLU data (e.g., in a lookup table or via entity annotations)
+  #   # Ensure you have defined synonyms in your training data.
+
+policies:
+  # Policies are for dialogue management (Rasa Core).
+  # For NLU-only training using "rasa train nlu", policies are generally not used by the NLU model itself.
+  # However, having a minimal policies section might be required by "rasa train" (which trains Core and NLU)
+  # or if you plan to integrate Rasa Core later.
+  # If you are *only* training NLU with "rasa train nlu", this section can often be minimal or omitted
+  # depending on the exact Rasa version and commands used. Some versions are more lenient.
+  # Example minimal policy if needed for "rasa train" or future Core use:
+  # - name: MemoizationPolicy
+  # - name: RulePolicy
+  # - name: UnexpecTEDIntentPolicy # Handles unexpected user inputs (Rasa 3.x)
+  #   max_history: 5
+  #   epochs: 100
+  # - name: TEDPolicy # Transformer Embedding Dialogue Policy for dialogue management
+  #   max_history: 5
+  #   epochs: 100
+  # Fallback policy (Rasa 2.x style, can be part of RulePolicy in 3.x)
+  # - name: FallbackClassifier
+  #   threshold: 0.7
+  #   ambiguity_threshold: 0.1
+  # If strictly NLU-only and "rasa train nlu" is used, this section might be ignored or empty.
+  # For instance, an empty list: policies: []
+  # Or just one essential policy for validation by some Rasa versions:
+  - name: RulePolicy # RulePolicy is often a good default to have for basic interactions or if Core is added.

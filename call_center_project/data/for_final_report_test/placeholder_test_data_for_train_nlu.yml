@@ -1,0 +1,5 @@
+version: '3.1'
+nlu:
+- intent: greet
+  examples: |
+    - hi from orchestrator-created dummy test data for train_nlu
