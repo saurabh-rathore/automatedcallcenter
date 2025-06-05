@@ -1,0 +1,21 @@
+faqs:
+  - id: faq_billing_due_date
+    intent: get_billing_info  # NLU intent this FAQ might relate to
+    entities:
+      - billing_property: due_date
+    question_variants: # Example questions that map to this
+      - "When is my bill due?"
+      - "What's the due date for my payment?"
+    answer: "Your bill is due on the 15th of each month. You can find the exact date on your monthly statement or by logging into your online account."
+    tags: ["billing", "payment", "due date"]
+
+  - id: faq_internet_plans
+    intent: get_service_info
+    entities:
+      - service_type: internet
+      - info_type: plans
+    question_variants:
+      - "What internet plans do you offer?"
+      - "Tell me about your broadband packages."
+    answer: "We offer several internet plans: Basic (10 Mbps), Standard (50 Mbps), and Premium (100 Mbps). Each comes with different data caps and pricing. Would you like details on a specific plan?"
+    tags: ["internet", "broadband", "plans", "service info"]

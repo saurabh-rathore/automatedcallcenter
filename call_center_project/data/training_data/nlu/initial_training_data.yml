@@ -1,0 +1,45 @@
+version: "3.1"  # Assuming Rasa 3.x
+
+nlu:
+- intent: greet
+  examples: |
+    - hello
+    - hi there
+    - good morning
+    - hey
+
+- intent: goodbye
+  examples: |
+    - bye
+    - see you later
+    - goodbye
+    - have a great day
+
+- intent: ask_service_status
+  examples: |
+    - is my internet down?
+    - what's the status of my [broadband](service_type) service?
+    - any outage for [mobile](service_type) in [Springfield](location)?
+    - check service status for [TV](service_type)
+
+- intent: report_issue
+  examples: |
+    - I have a problem with my [internet](service_type)
+    - My [phone line](service_type) is not working
+    - I can't connect to the [wifi](service_type)
+    - Report an issue with [television](service_type) at [123 Oak Street](address)
+
+- regex: zipcode
+  examples: |
+    - \d{5}
+
+- lookup: service_type
+  examples: |
+    - internet
+    - broadband
+    - mobile
+    - phone
+    - landline
+    - TV
+    - television
+    - wifi
