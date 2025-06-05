@@ -49,24 +49,28 @@ class KnowledgeBaseService:
         # (e.g., matching multiple entities, partial matches, confidence scores)
         for faq in self.faqs:
             if faq.get('intent') == intent_name:
-                # Basic entity check (if any entities are specified in FAQ and provided by NLU)
-                if not faq.get('entities') or not entities:
-                    return faq.get('answer') # If FAQ has no entity requirements or NLU provided none
+                faq_entity_requirements = faq.get('entities', [])
 
-                match_count = 0
-                required_entities_in_faq = len(faq.get('entities', []))
-                if required_entities_in_faq == 0: # FAQ has no specific entity requirements
+                if not faq_entity_requirements:  # FAQ has no entity requirements
                     return faq.get('answer')
 
-                for faq_entity_req in faq.get('entities', []):
+                # FAQ has entity requirements, so NLU must provide entities for a match.
+                if not entities:  # NLU provided no entities (None or empty list)
+                    continue  # This FAQ requires entities, but none were provided by NLU. Skip to next FAQ.
+
+                # Both FAQ and NLU have entities, proceed with matching.
+                match_count = 0
+                required_entities_in_faq = len(faq_entity_requirements) # Define required_entities_in_faq
+                for faq_entity_req in faq_entity_requirements:
                     for nlu_entity in entities:
                         if list(faq_entity_req.keys())[0] == nlu_entity.get('entity') and \
                            list(faq_entity_req.values())[0] == nlu_entity.get('value'):
                             match_count += 1
                             break # Found this required FAQ entity in NLU entities
 
-                if match_count == required_entities_in_faq:
+                if required_entities_in_faq > 0 and match_count == required_entities_in_faq: # Ensure it only returns if entities were required and matched
                     return faq.get('answer')
+                # If required_entities_in_faq is 0, it should have been caught by the earlier "if not faq_entity_requirements:"
         return None
 
     def find_solution(self, intent_name, entities=None, current_issue_summary=""):
@@ -85,23 +89,28 @@ class KnowledgeBaseService:
         # fuzzy matching, or even a small rule engine.
         for sol in self.solutions:
             if sol.get('related_intent') == intent_name:
-                if not sol.get('related_entities') or not entities: # If solution has no entity requirements or NLU provided none
+                solution_entity_requirements = sol.get('related_entities', [])
+
+                if not solution_entity_requirements: # Solution has no entity requirements
                     return sol.get('steps')
 
+                # Solution has entity requirements, so NLU must provide entities.
+                if not entities: # NLU provided no entities.
+                    continue # Skip to next solution.
+
+                # Both solution and NLU have entities, proceed with matching.
                 match_count = 0
-                required_entities_in_sol = len(sol.get('related_entities', []))
-                if required_entities_in_sol == 0: # Solution has no specific entity requirements
-                    return sol.get('steps')
-
-                for sol_entity_req in sol.get('related_entities', []):
+                required_entities_in_solution = len(solution_entity_requirements) # Define required_entities_in_solution
+                for sol_entity_req in solution_entity_requirements:
                     for nlu_entity in entities:
                         if list(sol_entity_req.keys())[0] == nlu_entity.get('entity') and \
                            list(sol_entity_req.values())[0] == nlu_entity.get('value'):
                             match_count += 1
                             break
 
-                if match_count == required_entities_in_sol:
+                if required_entities_in_solution > 0 and match_count == required_entities_in_solution: # Ensure it only returns if entities were required and matched
                     return sol.get('steps')
+                # If required_entities_in_solution is 0, it should have been caught by "if not solution_entity_requirements:"
         return None
 
 # Example usage

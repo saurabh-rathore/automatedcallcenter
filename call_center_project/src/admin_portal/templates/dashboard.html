@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard - Call Center Bot</title>
+    <!-- Link to a base.css or specific css file if needed -->
+    <!-- {% extends "base.html" %} Jinja-like comment -->
+</head>
+<body>
+    <!-- {% block content %} Jinja-like comment -->
+    <h1>Admin Dashboard</h1>
+
+    <h2>Bot Performance Metrics</h2>
+    <div id="metrics-container">
+        <!-- Example of how metrics might be displayed if passed from Flask -->
+        <!--
+        <p>Total Calls Today: {{ metrics.total_calls_today }}</p>
+        <p>Calls Handled by Bot: {{ metrics.calls_handled_by_bot }}</p>
+        <p>Calls Escalated to Human: {{ metrics.calls_escalated_to_human }}</p>
+        <p>Average Satisfaction Score: {{ metrics.avg_satisfaction_score }}</p>
+        <p>Fallback Rate: {{ metrics.fallback_rate_today_percent }}%</p>
+        <h3>Common Intents Today:</h3>
+        <ul>
+            {% for intent, count in metrics.common_intents %}
+            <li>{{ intent }}: {{ count }}</li>
+            {% endfor %}
+        </ul>
+        -->
+        <p><i>Bot performance metrics will be displayed here dynamically.</i></p>
+    </div>
+
+    <p><a href="/recordings">Manage Recordings</a></p>
+    <p><a href="/nlu_training_data">View/Edit NLU Training Data (Conceptual)</a></p>
+    <p><a href="/knowledge_base">Manage Knowledge Base (Conceptual)</a></p>
+    <!-- {% endblock %} Jinja-like comment -->
+</body>
+</html>

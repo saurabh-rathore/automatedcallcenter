@@ -31,36 +31,32 @@ class CallSession:
 
         while self.is_active:
             # 1. Get audio from user (simulated here)
-            user_text_input, user_audio_chunk = await self._simulate_get_user_audio_and_text()
+            user_audio_chunk = await self._simulate_get_user_audio() # Now only gets audio
             if not user_audio_chunk:
                 print(f"CallSession {self.session_id}: No more audio from user or call ended by simulation.")
                 self.is_active = False
                 break
 
-            print(f"CallSession {self.session_id}: Simulating user saying: '{user_text_input}'")
-
-            # 2. Transcribe user audio (placeholder STT will use its mock for this text)
-            # The actual audio_chunk is less important for the placeholder STT,
-            # but we pass it to mimic the flow.
+            # 2. Transcribe user audio
             async def audio_stream_gen(chunk):
                 yield chunk
 
             transcribed_text_from_stt = ""
-            # The placeholder STT's transcribe_stream yields dicts with pre-canned responses.
-            # We'll use the *simulated* user_text_input for NLU to make the flow more predictable.
             async for stt_result in self.stt_service.transcribe_stream(audio_stream_gen(user_audio_chunk), settings={'language_code': 'en-US'}):
-                transcribed_text_from_stt = stt_result.get("transcript", "")
+                transcribed_text_from_stt = stt_result.get("transcript", "").strip()
                 if stt_result.get("is_final"):
                     break
 
-            # For a more coherent simulation, we will use the *intended* text for NLU processing
-            # rather than the STT's canned response, as STT is just a placeholder.
-            effective_input_for_nlu = user_text_input
-            print(f"CallSession {self.session_id}: STT placeholder output: '{transcribed_text_from_stt}'. Using '{effective_input_for_nlu}' for NLU.")
+            if not transcribed_text_from_stt: # If STT output is empty
+                print(f"CallSession {self.session_id}: STT produced no text. Asking user to repeat.")
+                await self._play_bot_audio("Sorry, I didn't quite catch that. Could you please say it again?")
+                continue # Skip to next loop iteration to get new audio
 
+            effective_input_for_nlu = transcribed_text_from_stt # Use STT output for NLU
+            print(f"CallSession {self.session_id}: Using STT output for NLU: '{effective_input_for_nlu}'.")
 
             # 3. Process with NLU
-            nlu_output = await self.nlu_parser.parse(effective_input_for_nlu) # Use the simulated text
+            nlu_output = await self.nlu_parser.parse(effective_input_for_nlu)
             print(f"CallSession {self.session_id}: NLU Output: {nlu_output}")
 
             if nlu_output.get('intent', {}).get('name') == 'goodbye':
@@ -170,14 +166,17 @@ class CallSession:
         except Exception as e:
             print(f"CallSession {self.session_id}: Error writing to {feedback_file_path}: {e}")
 
-    async def _simulate_get_user_audio_and_text(self):
-        """Simulates receiving audio and the corresponding text from the user."""
+    async def _simulate_get_user_audio(self):
+        """Simulates receiving an audio chunk from the user. Returns a mock audio chunk or None."""
         await asyncio.sleep(0.2) # Simulate user thinking/speaking time
         if self._current_input_index < len(self._mock_user_inputs_store):
-            text_input, audio_chunk = self._mock_user_inputs_store[self._current_input_index]
+            # The text part of _mock_user_inputs_store is now effectively a comment for this method's simulation purpose
+            _text_comment, audio_chunk = self._mock_user_inputs_store[self._current_input_index]
             self._current_input_index += 1
-            return text_input, audio_chunk
-        return None, None # Simulate user hanging up or end of scripted input
+            # print(f"CallSession {self.session_id}: Simulating providing audio chunk: {audio_chunk}")
+            return audio_chunk
+        # print(f"CallSession {self.session_id}: No more simulated audio chunks.")
+        return None # Simulate user hanging up or end of scripted input
 
     async def play_greeting(self):
         print(f"CallSession {self.session_id}: Playing greeting.")

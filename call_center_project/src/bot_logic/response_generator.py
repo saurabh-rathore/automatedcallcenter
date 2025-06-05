@@ -49,31 +49,31 @@ class ResponseGenerator:
                 conversation_state.pop('current_solution_id', None)
                 conversation_state.pop('current_step_index', None)
 
-        # 2. Standard intent-based responses
-        if intent_name == 'greet':
-            response_text = "Hello! How can I help you today?"
-        elif intent_name == 'goodbye':
-            response_text = "Goodbye! Have a great day."
-        elif intent_name == 'thank_you':
-            response_text = "You're welcome! Is there anything else I can assist you with?"
-        elif intent_name:
-            # Try to find an FAQ first
+        # 2. Prioritize Knowledge Base lookup for all intents
+        if intent_name:
             faq_answer = self.kb_service.find_faq(intent_name, entities)
             if faq_answer:
                 response_text = faq_answer
             else:
-                # Try to find a solution if no FAQ matched
-                solution_details = self.kb_service.find_solution(intent_name, entities) # Assuming find_solution returns the whole solution dict or None
+                solution_details = self.kb_service.find_solution(intent_name, entities)
                 if solution_details and solution_details.get('steps'):
                     first_step = solution_details['steps'][0]
                     response_text = first_step['text']
-                    # The main bot orchestrator would use solution_details.get('id') and set current_step_index = 1
-                    # in conversation_state if this is the start of a solution.
-                    # For example:
-                    # conversation_state['current_solution_id'] = solution_details.get('id')
-                    # conversation_state['current_step_index'] = 1 # To indicate next step is step 1
+                    # Note: Orchestrator should handle setting current_solution_id and step_index in conversation_state
+                    # based on solution_details.get('id') if a multi-step solution starts.
+                # 3. If KB lookup fails, use specific hardcoded responses for common intents as a fallback
+                elif intent_name == 'greet':
+                    response_text = "Hello! How can I help you today? (default_greet)"
+                elif intent_name == 'goodbye':
+                    response_text = "Goodbye! Have a great day. (default_goodbye)"
+                elif intent_name == 'thank_you':
+                    response_text = "You're welcome! Is there anything else I can assist you with? (default_thanks)"
+                # 4. Generic fallback if intent is recognized but no specific KB content or hardcoded response
                 else:
-                    response_text = f"I understand you're asking about '{intent_name}', but I don't have specific information on that yet. I can connect you to an agent if you'd like."
+                    response_text = f"I understand your intent is '{intent_name}', but I don't have specific information for that yet. Please try rephrasing or I can find an agent."
+        else:
+            # 5. Fallback if NLU doesn't recognize an intent
+            response_text = "I'm sorry, I didn't quite understand that. Could you please rephrase?"
 
         return response_text
 

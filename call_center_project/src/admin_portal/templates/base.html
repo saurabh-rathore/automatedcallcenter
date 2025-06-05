@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Using Jinja2-like syntax for block title, common in Flask -->
+    <title>{% block title %}Call Center Bot Admin Portal{% endblock %}</title>
+    <!--
+        Placeholder for links to CSS files
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    -->
+    <style>
+        body { font-family: sans-serif; margin: 20px; background-color: #f4f4f4; color: #333; }
+        header { background-color: #007bff; color: white; padding: 10px 0; text-align: center; }
+        nav ul { list-style-type: none; padding: 0; text-align: center; }
+        nav ul li { display: inline; margin-right: 20px; }
+        nav ul li a { color: white; text-decoration: none; }
+        .container { background-color: white; padding: 20px; margin-top: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        h1, h2 { color: #007bff; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f0f0f0; }
+        form input[type="file"], form input[type="submit"] { margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Call Center Bot - Admin Portal</h1>
+        <nav>
+            <ul>
+                <!-- Example: <li><a href="{{ url_for('dashboard') }}">Dashboard</a></li> -->
+                <!-- Example: <li><a href="{{ url_for('manage_recordings') }}">Recordings</a></li> -->
+                <li><a href="/">Dashboard (Conceptual)</a></li>
+                <li><a href="/recordings">Recordings (Conceptual)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <!-- Placeholder for flash messages -->
+        <!--
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <ul class=flashes>
+                {% for category, message in messages %}
+                    <li class="{{ category }}">{{ message }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+        -->
+
+        {% block content %}
+        <!-- Default content if a sub-template doesn't override this block -->
+        <p>Welcome to the Admin Portal.</p>
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Call Center Bot Project</p>
+        <!-- Placeholder for links to JS files -->
+        <!-- <script src="{{ url_for('static', filename='js/main.js') }}"></script> -->
+    </footer>
+</body>
+</html>
