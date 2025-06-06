@@ -1,0 +1,8 @@
+version: '3.1'
+nlu:
+- intent: book_flight
+  examples: '- I want to fly from L[ondon ](city_origin)to P[aris ](city_destination)next week'
+- intent: find_restaurant
+  examples: '- show me [Italian](cuisine) [food](food_type) near me'
+- intent: book_flight_extra
+  examples: '- Book a flight for me from [Berlin](city_origin) to [Munich](city_destination) [tomorrow morning](date_time) and I want a [window seat](seat_preference)'

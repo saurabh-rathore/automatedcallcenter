@@ -1,94 +1,29 @@
 [
-    {
-        "speaker": "Agent Smith",
-        "utterance": "Hello, thank you for calling Tech Support, this is Agent Smith. How can I help you today?",
-        "timestamp": "00:00:01.123",
-        "intent": "greet"
-    },
-    {
-        "speaker": "Customer",
-        "utterance": "Hi Smith, I'm having trouble with my internet connection. It's been really slow all morning. And sometimes it drops completely.",
-        "timestamp": "00:00:05.456",
-        "intent": "report_issue",
-        "entities": [
-            {"start_char": 36, "end_char": 55, "entity_type": "service_type", "value": "internet connection"},
-            {"start_char": 63, "end_char": 86, "entity_type": "issue_detail", "value": "really slow all morning"},
-            {"start_char": 98, "end_char": 114, "entity_type": "issue_detail", "value": "drops completely"}
-        ]
-    },
-    {
-        "speaker": "Agent Smith",
-        "utterance": "I understand. I can definitely look into that for you. Could you please provide your account number or the phone number associated with your account?",
-        "timestamp": "00:00:12.030",
-        "intent": "request_account_info"
-    },
-    {
-        "speaker": "Customer",
-        "utterance": "Sure, my account number is 123-456-789.",
-        "timestamp": "00:00:18.789",
-        "intent": "inform_account_info",
-        "entities": [
-            {"start_char": 28, "end_char": 40, "entity_type": "account_number", "value": "123-456-789."}
-        ]
-    },
-    {
-        "speaker": "Agent Smith",
-        "utterance": "Thank you. One moment while I pull up your details... Okay, I see your account. I'm noticing some fluctuations on our end as well. Let's try a basic troubleshooting step. Have you tried restarting your modem and router yet?",
-        "timestamp": "00:00:22.321"
-    },
-    {
-        "speaker": "Customer",
-        "utterance": "Yes, I did that about an hour ago. It didn't seem to make much difference. The light on the modem is still blinking green, but the internet light is amber.",
-        "timestamp": "00:00:30.500",
-        "intent": "inform_previous_steps",
-        "entities": [
-            {"start_char": 91, "end_char": 96, "entity_type": "device_type", "value": "modem"},
-            {"start_char": 127, "end_char": 141, "entity_type": "device_indicator", "value": "internet light"},
-            {"start_char": 145, "end_char": 150, "entity_type": "indicator_status", "value": "amber"}
-        ]
-    },
-    {
-        "speaker": "Agent Smith",
-        "utterance": "Okay, thanks for that information. An amber internet light usually indicates a problem connecting to our network. Let me run a remote diagnostic on your line. This might take a couple of minutes.",
-        "timestamp": "00:00:38.150"
-    },
-    {
-        "speaker": "Agent Smith",
-        "utterance": "Thanks for waiting. The diagnostic tool indicates a potential signal issue outside your premises. I'll need to schedule a technician to come and take a look. Are you available tomorrow afternoon, say between 1 PM and 5 PM?",
-        "timestamp": "00:02:10.900",
-        "intent": "propose_solution",
-        "entities": [
-            {"start_char": 130, "end_char": 148, "entity_type": "proposed_time", "value": "tomorrow afternoon"},
-            {"start_char": 164, "end_char": 177, "entity_type": "proposed_time_window", "value": "1 PM and 5 PM"}
-        ]
-    },
-    {
-        "speaker": "Customer",
-        "utterance": "Yes, that should work.",
-        "timestamp": "00:02:18.200",
-        "intent": "affirm"
-    },
-    {
-        "speaker": "Agent Smith",
-        "utterance": "Great. I've scheduled a technician for tomorrow, between 1 PM and 5 PM. Is there anything else I can help you with today?",
-        "timestamp": "00:02:20.050",
-        "intent": "offer_further_assistance"
-    },
-    {
-        "speaker": "Customer",
-        "utterance": "No, that's all. Thank you for your help!",
-        "timestamp": "00:02:25.300",
-        "intent": "goodbye_thank_you"
-    },
-    {
-        "speaker": "Agent Smith",
-        "utterance": "You're welcome! Have a great day.",
-        "timestamp": "00:02:27.100",
-        "intent": "goodbye"
-    },
-    {
-        "speaker": "Tech notes",
-        "utterance": "Customer experiencing slow/dropping internet. Amber light on modem. Remote diagnostic failed. Scheduled technician visit. Call ended.",
-        "timestamp": null
-    }
+  {
+    "text": "I want to fly from London to Paris next week",
+    "intent": "book_flight",
+    "entities": [
+      {"start_char": 20, "end_char": 26, "entity_type": "city_origin", "value": "London"},
+      {"start_char": 30, "end_char": 35, "entity_type": "city_destination", "value": "Paris"},
+      {"start_char": 36, "end_char": 45, "entity_type": "date_time", "value": "next week"}
+    ]
+  },
+  {
+    "text": "show me Italian food near me",
+    "intent": "find_restaurant",
+    "entities": [
+      {"start_char": 8, "end_char": 15, "entity_type": "cuisine", "value": "Italian"},
+      {"start_char": 16, "end_char": 20, "entity_type": "food_type", "value": "food"}
+    ]
+  },
+  {
+    "text": "Book a flight for me from Berlin to Munich tomorrow morning and I want a window seat",
+    "intent": "book_flight_extra",
+    "entities": [
+      {"start_char": 26, "end_char": 32, "entity_type": "city_origin", "value": "Berlin"},
+      {"start_char": 36, "end_char": 42, "entity_type": "city_destination", "value": "Munich"},
+      {"start_char": 43, "end_char": 59, "entity_type": "date_time", "value": "tomorrow morning"},
+      {"start_char": 73, "end_char": 84, "entity_type": "seat_preference", "value": "window seat"}
+     ]
+  }
 ]
