@@ -1,0 +1,67 @@
+[
+    {
+        "speaker": "Agent Smith",
+        "utterance": "Hello, thank you for calling Tech Support, this is Agent Smith. How can I help you today?",
+        "timestamp": "00:00:01.123"
+    },
+    {
+        "speaker": "Customer",
+        "utterance": "Hi Smith, I'm having trouble with my internet connection. It's been really slow all morning. And sometimes it drops completely.",
+        "timestamp": "00:00:05.456"
+    },
+    {
+        "speaker": "Agent Smith",
+        "utterance": "I understand. I can definitely look into that for you. Could you please provide your account number or the phone number associated with your account?",
+        "timestamp": "00:00:12.030"
+    },
+    {
+        "speaker": "Customer",
+        "utterance": "Sure, my account number is 123-456-789.",
+        "timestamp": "00:00:18.789"
+    },
+    {
+        "speaker": "Agent Smith",
+        "utterance": "Thank you. One moment while I pull up your details... Okay, I see your account. I'm noticing some fluctuations on our end as well. Let's try a basic troubleshooting step. Have you tried restarting your modem and router yet?",
+        "timestamp": "00:00:22.321"
+    },
+    {
+        "speaker": "Customer",
+        "utterance": "Yes, I did that about an hour ago. It didn't seem to make much difference. The light on the modem is still blinking green, but the internet light is amber.",
+        "timestamp": "00:00:30.500"
+    },
+    {
+        "speaker": "Agent Smith",
+        "utterance": "Okay, thanks for that information. An amber internet light usually indicates a problem connecting to our network. Let me run a remote diagnostic on your line. This might take a couple of minutes.",
+        "timestamp": "00:00:38.150"
+    },
+    {
+        "speaker": "Agent Smith",
+        "utterance": "Thanks for waiting. The diagnostic tool indicates a potential signal issue outside your premises. I'll need to schedule a technician to come and take a look. Are you available tomorrow afternoon, say between 1 PM and 5 PM?",
+        "timestamp": "00:02:10.900"
+    },
+    {
+        "speaker": "Customer",
+        "utterance": "Yes, that should work.",
+        "timestamp": "00:02:18.200"
+    },
+    {
+        "speaker": "Agent Smith",
+        "utterance": "Great. I've scheduled a technician for tomorrow, between 1 PM and 5 PM. Is there anything else I can help you with today?",
+        "timestamp": "00:02:20.050"
+    },
+    {
+        "speaker": "Customer",
+        "utterance": "No, that's all. Thank you for your help!",
+        "timestamp": "00:02:25.300"
+    },
+    {
+        "speaker": "Agent Smith",
+        "utterance": "You're welcome! Have a great day.",
+        "timestamp": "00:02:27.100"
+    },
+    {
+        "speaker": "Tech notes",
+        "utterance": "Customer experiencing slow/dropping internet. Amber light on modem. Remote diagnostic failed. Scheduled technician visit. Call ended.",
+        "timestamp": null
+    }
+]

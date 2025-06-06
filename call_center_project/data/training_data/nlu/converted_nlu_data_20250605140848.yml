@@ -1,0 +1,22 @@
+version: '3.1'
+nlu:
+- intent: greet
+  examples: '- Hello, thank you for calling Tech Support, this is Agent Smith. How can I help you today?'
+- intent: report_issue
+  examples: '- Hi Smith, I''m having trouble with my[ internet connectio](service_type)n. It''s [been really slow all mo](issue_detail)rning. And s[ometimes it drop](issue_detail)s completely.'
+- intent: request_account_info
+  examples: '- I understand. I can definitely look into that for you. Could you please provide your account number or the phone number associated with your account?'
+- intent: inform_account_info
+  examples: '- Sure, my account number is 1[23-456-789.](account_number)'
+- intent: inform_previous_steps
+  examples: '- Yes, I did that about an hour ago. It didn''t seem to make much difference. The light on the[ mode](device_type)m is still blinking green, but [the internet l](device_indicator)ight[ is a](indicator_status)mber.'
+- intent: propose_solution
+  examples: '- Thanks for waiting. The diagnostic tool indicates a potential signal issue outside your premises. I''ll need to schedule a technici[an to come and tak](proposed_time)e a look. Are yo[u available t](proposed_time_window)omorrow afternoon, say between 1 PM and 5 PM?'
+- intent: affirm
+  examples: '- Yes, that should work.'
+- intent: offer_further_assistance
+  examples: '- Great. I''ve scheduled a technician for tomorrow, between 1 PM and 5 PM. Is there anything else I can help you with today?'
+- intent: goodbye_thank_you
+  examples: '- No, that''s all. Thank you for your help!'
+- intent: goodbye
+  examples: '- You''re welcome! Have a great day.'

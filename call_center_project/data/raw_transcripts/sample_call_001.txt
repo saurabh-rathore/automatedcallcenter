@@ -1,0 +1,21 @@
+[00:00:01.123] Agent Smith: Hello, thank you for calling Tech Support, this is Agent Smith. How can I help you today?
+[00:00:05.456] Customer: Hi Smith, I'm having trouble with my internet connection. It's been really slow all morning.
+And sometimes it drops completely.
+[00:00:12.030] Agent Smith: I understand. I can definitely look into that for you.
+Could you please provide your account number or the phone number associated with your account?
+[00:00:18.789] Customer: Sure, my account number is 123-456-789.
+[00:00:22.321] Agent Smith: Thank you. One moment while I pull up your details...
+Okay, I see your account. I'm noticing some fluctuations on our end as well.
+Let's try a basic troubleshooting step. Have you tried restarting your modem and router yet?
+[00:00:30.500] Customer: Yes, I did that about an hour ago. It didn't seem to make much difference.
+The light on the modem is still blinking green, but the internet light is amber.
+[00:00:38.150] Agent Smith: Okay, thanks for that information. An amber internet light usually indicates a problem connecting to our network.
+Let me run a remote diagnostic on your line. This might take a couple of minutes.
+[00:02:10.900] Agent Smith: Thanks for waiting. The diagnostic tool indicates a potential signal issue outside your premises.
+I'll need to schedule a technician to come and take a look.
+Are you available tomorrow afternoon, say between 1 PM and 5 PM?
+[00:02:18.200] Customer: Yes, that should work.
+[00:02:20.050] Agent Smith: Great. I've scheduled a technician for tomorrow, between 1 PM and 5 PM. Is there anything else I can help you with today?
+[00:02:25.300] Customer: No, that's all. Thank you for your help!
+[00:02:27.100] Agent Smith: You're welcome! Have a great day.
+Tech notes: Customer experiencing slow/dropping internet. Amber light on modem. Remote diagnostic failed. Scheduled technician visit. Call ended.
